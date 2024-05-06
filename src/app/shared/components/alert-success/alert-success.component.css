@@ -1,0 +1,19 @@
+.dark-theme{
+    background-color: var(--black);
+}
+
+body{
+    background-color: var(--white);
+    width: 200px;
+    padding: 24px;
+}
+svg{
+    fill: var(--indigo);
+    width: 48px;
+    height: 48px;
+    animation: bounceIn;
+    animation-duration: 1.5s;
+}
+p{
+    text-align: center;
+}

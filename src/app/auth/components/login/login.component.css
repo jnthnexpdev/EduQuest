@@ -1,0 +1,15 @@
+.dark-theme{
+    background-color: var(--black);
+}
+.dark-theme h3{ color: var(--indigo-light); }
+
+body{
+    min-width: 300px;
+    width: 400px;
+    max-width: 500px;
+}
+form{ width: 100%; }
+h3{ color: var(--indigo); }
+.field-form, .password-field-form, input{ width: 100%; }
+
+.btn-options{ width: 100%; }
