@@ -27,7 +27,7 @@
 .subtitle-2{ font-size: 22.78px; }
 .subtitle-3{ font-size: 20.25px; }
 
-.text-large, .inp-form{ font-size: 18px; }
+.text-large, .inp-form, .inp-search{ font-size: 18px; }
 .text-medium{ font-size: 16px; }
 .text-small, .btn-primary{ font-size: 14.22px; }
 
@@ -35,10 +35,14 @@
 .container{
     border-radius: 8px;
     padding: 24px;
-    box-shadow: 0px 15px 40px rgba(0,0,0,0.2),     -0px -15px 40px rgba(0,0,0,0.2);
+    box-shadow: 0px 15px 40px rgba(0,0,0,0.2), -0px -15px 40px rgba(0,0,0,0.2);
 }
 
 /* Padding Margin */
+.mt-24{ margin-top: 24px; }
+.mt-16{ margin-top: 16px; }
+.mt-8{ margin-top: 8px; }
+
 .mb-24{ margin-bottom: 24px; }
 .mb-16{ margin-bottom: 16px; }
 .mb-8{ margin-bottom: 8px; }
@@ -87,12 +91,30 @@
     justify-content: flex-start;
     flex-direction: column;
 }
+.flex-center-end-column{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.flex-center-evenly-column{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
+}
 
 /* Headers */
 .svg-header{
     width: 24px;
     height: 24px;
-    margin-right: 4px;
+    margin-right: 8px;
 }
 
 /* Etiquetas formulario */
@@ -107,14 +129,15 @@
     margin-right: 8px;
 }
 
-.password-field-form{ position: relative; }
-.password-field-form input{ width: 100%;}
-.password-field-form svg{
+.password-field-form {position: relative;}
+.password-field-form input {width: calc(100% - 24px);padding-right: 32px;}
+.password-field-form svg {
     width: 16px;
     height: 16px;
     fill: var(--indigo);
     position: absolute;
-    top: 8px;
+    top: 32%;
+    transform: translateY(-50%);
     right: 8px;
     background-color: var(--white);
     cursor: pointer;
@@ -134,7 +157,21 @@ input::placeholder{
     offset: none !important;
 }
 .inp-form:focus{ border: 2px solid var(--indigo); }
-.inp-search{}
+
+
+.inp-search {position: relative;}
+.inp-search input {width: calc(100% - 24px);padding: 8px 260px;}
+.inp-search svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--indigo);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    background-color: var(--white);
+    cursor: pointer;
+}
 
 
 /* Selectores */
@@ -147,13 +184,14 @@ button:hover{
     transform: scale(1.05);
 }
 .btn-primary{
-    padding: 4px 8px;
+    padding: 8px 8px;
     border-radius: 4px;
-    background-color: var(--indigo);
+    background-color: var(--indigo-light);
     color: var(--white);
+    font-weight: 600;
 }
 .btn-secondary{
-    padding: 4px 8px;
+    padding: 6px 8px;
     border-radius: 4px;
     background-color: transparent;
     color: var(--indigo);
@@ -165,8 +203,10 @@ button:hover{
 .dark-theme .btn-primary{ background-color: var(--indigo-light); color: var(--black); }
 .dark-theme .btn-secondary{ color: var(--white); border-color: var(--white); }
 .dark-theme .inp-form{ background-color: var(--dark); border-color: var(--dark); color: var(--white); }
+.dark-theme .inp-search input{ background-color: var(--black); border-color: var(--indigo-light); color: var(--white); }
 .dark-theme input::placeholder{  opacity: 0.6; color: var(--white); }
 .dark-theme .password-field-form svg{ background-color: var(--dark); fill: var(--indigo-light); }
+.dark-theme .inp-search svg{ background-color: var(--black); fill: var(--indigo-light); }
 .dark-theme .field-form svg{ fill: var(--indigo-light); }
 
 /* Responsivo */
@@ -179,10 +219,11 @@ button:hover{
     .subtitle-2{ font-size: 17.72px; }
     .subtitle-3{ font-size: 15.75px; }
     
-    .text-large, .inp-form{ font-size: 14px; }
+    .text-large, .inp-form, .inp-search{ font-size: 14px; }
     .text-medium{ font-size: 12.44px; }
     .text-small, .btn-primary, .btn-secondary{ font-size: 11.06px; }
-    
+
+    .grid-container {grid-template-columns: repeat(1, 1fr);}
 }
 
 @media (min-width : 601px) and (max-width : 1000px){
@@ -195,8 +236,10 @@ button:hover{
     .subtitle-2{ font-size: 20.25px; }
     .subtitle-3{ font-size: 18px; }
     
-    .text-large, .inp-form{ font-size: 16px; }
+    .text-large, .inp-form, .inp-search{ font-size: 16px; }
     .text-medium{ font-size: 14.22px; }
     .text-small, .btn-primary, .btn-secondary{ font-size: 12.64px; }
     
+    .grid-container {grid-template-columns: repeat(2, 1fr);}
+
 }
