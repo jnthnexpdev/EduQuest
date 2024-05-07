@@ -1,9 +1,9 @@
 .dark-theme .card-category{ 
     background-color: var(--black); 
     color: var(--white);
-    border:solid 2px var(--indigo-light);
+    border:solid 2px var(--black);
 }
-.dark-theme .card-category:hover{border:solid 2px var(--white); } 
+.dark-theme .card-category:hover{border:solid 2px var(--indigo-light); } 
 .dark-theme svg{fill: var(--indigo-light);}
 
 

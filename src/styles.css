@@ -17,6 +17,13 @@
     font-optical-sizing: auto;
     font-weight: 500;
 }
+/* Estilos para navegadores webkit */
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-track {background: var(--white);}
+::-webkit-scrollbar-thumb {
+    background: var(--dark);
+    border-radius: 6px;
+}
 
 /* Escala tipografica */
 .title-1{ font-size: 36.49px; font-weight: 600; }
@@ -159,8 +166,9 @@ input::placeholder{
 .inp-form:focus{ border: 2px solid var(--indigo); }
 
 
+
 .inp-search {position: relative;}
-.inp-search input {width: calc(100% - 24px);padding: 8px 260px;}
+.inp-search input {width: calc(100% - 24px);padding:8px 32px 8px 32px;}
 .inp-search svg {
     width: 16px;
     height: 16px;
@@ -168,11 +176,10 @@ input::placeholder{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 30px;
+    right: 12px;
     background-color: var(--white);
     cursor: pointer;
 }
-
 
 /* Selectores */
 .select-form{}
@@ -186,16 +193,17 @@ button:hover{
 .btn-primary{
     padding: 8px 8px;
     border-radius: 4px;
-    background-color: var(--indigo-light);
+    background-color: var(--indigo);
     color: var(--white);
     font-weight: 600;
 }
 .btn-secondary{
-    padding: 6px 8px;
+    padding: 8px 8px;
     border-radius: 4px;
     background-color: transparent;
     color: var(--indigo);
     border: 1px solid var(--indigo);
+    font-weight: 600;   
 }
 
 /* Modo oscuro */
@@ -208,7 +216,9 @@ button:hover{
 .dark-theme .password-field-form svg{ background-color: var(--dark); fill: var(--indigo-light); }
 .dark-theme .inp-search svg{ background-color: var(--black); fill: var(--indigo-light); }
 .dark-theme .field-form svg{ fill: var(--indigo-light); }
-
+.dark-theme .inp-form:focus{ border: 2px solid var(--indigo-light); }
+.dark-theme .inp-search:focus{ border: 2px solid var(--white); }
+.dark-theme .inp-search:focus svg{ fill: var(--white); }
 /* Responsivo */
 @media (min-width : 301px) and (max-width : 600px){
     .title-1{ font-size: 28.38px; }
@@ -226,7 +236,7 @@ button:hover{
     .grid-container {grid-template-columns: repeat(1, 1fr);}
 }
 
-@media (min-width : 601px) and (max-width : 1000px){
+@media (min-width : 601px) and (max-width : 1100px){
         
     .title-1{ font-size: 32.44px; }
     .title-2{ font-size: 28.83px; }

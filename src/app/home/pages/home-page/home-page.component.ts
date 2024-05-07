@@ -1,19 +1,20 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-
 import { LoginComponent } from '../../../auth/components/login/login.component';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
+
 import { CategoriesComponent } from '../../components/categories/categories.component';
+import { PlanesComponent } from '../../components/planes/planes.component';
 
 @Component({
     selector: 'app-home-page',
     standalone: true,
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.css',
-    imports: [NgClass, CategoriesComponent]
+    imports: [NgClass, CategoriesComponent, PlanesComponent]
 })
 export class HomePageComponent implements OnInit{
 
