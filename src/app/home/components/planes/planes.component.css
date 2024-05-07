@@ -6,8 +6,9 @@
 }
 .dark-theme .card-category:hover{border:solid 2px var(--white); } 
 .dark-theme svg{fill: var(--indigo-light);}
+.dark-theme h2{color:var(--white)}
 
-
+h2{color:var(--white)}
 
 .grid-container-planes {
     display: grid;

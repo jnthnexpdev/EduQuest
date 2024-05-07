@@ -10,6 +10,11 @@ body{
 }
 form{ width: 100%; }
 h3{ color: var(--indigo); }
-.field-form, .password-field-form, input{ width: 100%; }
+.field-form, .password-field-form, .inp-form{ width: 100%; }
+
+input[type="checkbox"]{
+    margin-right: 4px;
+    
+}
 
 .btn-options{ width: 100%; }
