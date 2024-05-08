@@ -31,7 +31,7 @@ export class SystemService {
 
       return { darkTheme : savedPreferences.darkTheme || false }
     }else{
-      return { darkTheme : false }
+      return { darkTheme : true}
     }
   }
   
