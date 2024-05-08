@@ -7,14 +7,17 @@ import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
 
 import { CategoriesComponent } from '../../components/categories/categories.component';
-import { PlanesComponent } from '../../components/planes/planes.component';
+import { PlansComponent } from '../../components/plans/plans.component';
+
+import { Router } from '@angular/router';
+
 
 @Component({
     selector: 'app-home-page',
     standalone: true,
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.css',
-    imports: [NgClass, CategoriesComponent, PlanesComponent]
+    imports: [NgClass, CategoriesComponent, PlansComponent]
 })
 export class HomePageComponent implements OnInit{
 
@@ -23,7 +26,8 @@ export class HomePageComponent implements OnInit{
     constructor(
     private matDialog : MatDialog,
     private systemService : SystemService,
-    private alertService : AlertService
+    private alertService : AlertService,
+    private router: Router
     ){}
   
     ngOnInit() : void {
@@ -40,4 +44,13 @@ export class HomePageComponent implements OnInit{
         // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
         this.matDialog.open(LoginComponent);
     }
+
+    scrollToPlans() {
+      const element = document.getElementById('plans');
+      if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+      }
+  }
+  
+
 }

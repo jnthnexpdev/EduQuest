@@ -3,13 +3,13 @@ import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'app-planes',
+  selector: 'app-plans',
   standalone: true,
   imports: [NgClass],
-  templateUrl: './planes.component.html',
-  styleUrl: './planes.component.css'
+  templateUrl: './plans.component.html',
+  styleUrl: './plans.component.css'
 })
-export class PlanesComponent implements OnInit{
+export class PlansComponent implements OnInit{
 
   darkTheme = signal(false);
 

@@ -1,0 +1,40 @@
+
+.dark-theme svg{fill: var(--indigo-light);}
+.dark-theme h2{color:var(--white)}
+
+h2{color:var(--white)}
+svg {fill: var(--indigo);}
+
+.grid-container-planes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+.card-plans {
+  position: relative;
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 10px;
+
+}
+.status-card  {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.card-body { 
+  width: 400px;padding: 20px;
+  border-radius: 8px;
+}
+.btn{width: 100%;}
+.price{color: var(--indigo);}
+
+.current-card {
+  border:solid 5px var(--indigo);
+  border-radius: 8px;
+}
+.membership-type {
+  color: var(--black);
+  font-weight: 600;
+}
