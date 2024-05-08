@@ -12,9 +12,14 @@ form{ width: 100%; }
 h3{ color: var(--indigo); }
 .field-form, .password-field-form, .inp-form{ width: 100%; }
 
+.btn-options{ width: 100%; }
+
 input[type="checkbox"]{
     margin-right: 4px;
     
 }
-
-.btn-options{ width: 100%; }
+input[type=checkbox] {
+    accent-color: var(--indigo);
+    color: var(--gray);
+   }
+input[type=checkbox]:checked ~ label {	color:var(--indigo) }

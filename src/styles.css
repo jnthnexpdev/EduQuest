@@ -19,7 +19,7 @@
 }
 /* Estilos para navegadores webkit */
 ::-webkit-scrollbar {width: 10px;}
-::-webkit-scrollbar-track {background: var(--white);}
+::-webkit-scrollbar-track {background: var(--gray);}
 ::-webkit-scrollbar-thumb {
     background: var(--dark);
     border-radius: 6px;
