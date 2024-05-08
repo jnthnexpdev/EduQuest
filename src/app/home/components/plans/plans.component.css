@@ -1,6 +1,9 @@
 
 .dark-theme svg{fill: var(--indigo-light);}
 .dark-theme h2{color:var(--white)}
+.dark-theme .price{color: var(--indigo-light);}
+.dark-theme .current-card{  border:solid 2px var(--indigo-light);}
+.dark-theme .card-plans {background-color: var(--black);}
 
 h2{color:var(--white)}
 svg {fill: var(--indigo);}
@@ -13,7 +16,6 @@ svg {fill: var(--indigo);}
 .card-plans {
   position: relative;
   background-color: var(--white);
-  color: var(--black);
   border-radius: 10px;
 
 }
@@ -26,6 +28,7 @@ svg {fill: var(--indigo);}
 .card-body { 
   width: 400px;padding: 20px;
   border-radius: 8px;
+  border:solid 2px var(--white);
 }
 .btn{width: 100%;}
 .price{color: var(--indigo);}
@@ -35,6 +38,5 @@ svg {fill: var(--indigo);}
   border-radius: 8px;
 }
 .membership-type {
-  color: var(--black);
   font-weight: 600;
 }
