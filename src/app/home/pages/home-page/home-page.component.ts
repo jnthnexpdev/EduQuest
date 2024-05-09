@@ -6,10 +6,9 @@ import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
 
-import { CategoriesComponent } from '../../components/categories/categories.component';
-import { PlansComponent } from '../../components/plans/plans.component';
-
 import { Router } from '@angular/router';
+import { PlansComponent } from '../../../shared/components/plans/plans.component';
+import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
 
 
 @Component({
