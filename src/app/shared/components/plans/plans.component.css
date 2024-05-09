@@ -4,6 +4,7 @@
 .dark-theme .price{color: var(--indigo-light);}
 .dark-theme .current-card{  border:solid 2px var(--indigo-light);}
 .dark-theme .card-plans {background-color: var(--black);}
+.dark-theme .not-available{fill: var(--red);}
 
 h2{color:var(--white)}
 svg {fill: var(--indigo);}
@@ -26,17 +27,32 @@ svg {fill: var(--indigo);}
   transform: translateX(-50%);
 }
 .card-body { 
-  width: 400px;padding: 20px;
+  width: 400px;
+  padding: 20px;
   border-radius: 8px;
   border:solid 2px var(--white);
 }
 .btn{width: 100%;}
 .price{color: var(--indigo);}
 
+.membership-type {
+  font-weight: 600;
+}
+.not-available{
+  fill: var(--red);
+}
+
+/* estilos suscripcion actual */
 .current-card {
   border:solid 5px var(--indigo);
   border-radius: 8px;
 }
-.membership-type {
-  font-weight: 600;
+.current-card button{
+  background-color: var(--dark);
+  color: var(--gray);
 }
+.current-card button:hover{
+  transform: none;
+  cursor: auto;
+  }
+

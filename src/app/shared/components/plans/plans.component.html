@@ -1,15 +1,51 @@
 <section [ngClass]="darkTheme() ? 'dark-theme flex-center-center-column' : 'flex-center-center-column  mb-24'">
     <h2 class="title-1 mt-24 mb-24">Suscripciones</h2>
+    <h2 class="mb-24">¡Únete a nuestra familia con nuestro plan gratuito y disfruta de contenidos exclusivos</h2>
     <div class="grid-container-planes mb-24 mt-24">
         <div class="card-plans">
             <div class="status-card btn-primary">Actual</div>
             <div class="current-card card-body">
-                <h3 class="membership-type card-title flex-center-start-row mt-16 mb-16">Gratis</h3>
-                <h3 class="price title-1 card-title flex-center-center-row mb-16">$0.00</h3>
+                <h3 class="membership-type card-title flex-center-start-row subtitle-2 mt-16 mb-16">Gratis</h3>
+                <h3 class="price title-1 card-title flex-center-center-row mb-16">$0.00 MXN</h3>
+                <h3 class="price text-medium card-title flex-center-center-row mb-24">Registrate y disfruta de nuestro contenido</h3>
                 <ul class="flex-start-start-column">
                     <li class="flex-center-start-row mb-16">
                         <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                        </svg>
+                        <a class="text-medium">Anuncios</a>
+                    </li>
+                    <li class="flex-center-start-row mb-16">
+                        <svg class="svg-header " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                        </svg>
+                        <a class="text-medium">Contenido profesional</a>
+                    </li>
+                    <li class="flex-center-start-row mb-16">
+                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
+                        </svg>
+                        <a class="text-medium">Acceso al foro</a>
+                    </li>
+                    <li class="flex-center-start-row mb-16">
+                        <svg class="not-available svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
+                        </svg>
+                        <a class="text-medium">Certificaciones</a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary mt-16">Comprar</button>
+            </div>
+        </div>
+       <div class="card-plans">
+            <div class="card-body">
+                <h3 class="membership-type card-title flex-center-start-row subtitle-2  mt-16 mb-16">Mensual</h3>
+                <h3 class="price title-1 card-title flex-center-center-row mb-16">$300.00 MXN</h3>
+                <h3 class="price text-medium card-title flex-center-center-row mb-24">Disfruta de nuestro plan mensual</h3>
+                <ul class="flex-start-start-column">
+                    <li class="flex-center-start-row mb-16">
+                        <svg class="not-available svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
                         </svg>
                         <a class="text-medium">Anuncios</a>
                     </li>
@@ -26,39 +62,6 @@
                         <a class="text-medium">Acceso al foro</a>
                     </li>
                     <li class="flex-center-start-row mb-16">
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
-                        </svg>
-                        <a class="text-medium">Certificaciones</a>
-                    </li>
-                </ul>
-                <button class="btn btn-primary mt-16">Comprar</button>
-            </div>
-        </div>
-       <div class="card-plans">
-            <div class="card-body">
-                <h3 class="membership-type card-title flex-center-start-row mt-16 mb-16">Mensual</h3>
-                <h3 class="price title-1 card-title flex-center-center-row mb-16">$300.00</h3>
-                <ul class="flex-start-start-column">
-                    <li class="flex-center-start-row mb-16">
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
-                        </svg>
-                        <a class="text-medium">Anuncios</a>
-                    </li>
-                    <li class="flex-center-start-row mb-16">
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-                        </svg>
-                        <a class="text-medium">Contenido profesional</a>
-                    </li>
-                    <li class="flex-center-start-row mb-16">
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                            <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
-                        </svg>
-                        <a class="text-medium">Acceso al foro</a>
-                    </li>
-                    <li class="flex-center-start-row mb-16">
                         <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
                         </svg>
@@ -70,11 +73,12 @@
         </div>
        <div class="card-plans">
             <div class="card-body">
-                <h3 class="membership-type card-title flex-center-start-row mt-16 mb-16">Anual</h3>
-                <h3 class="price title-1 card-title flex-center-center-row mb-16">$3,000.00</h3>
+                <h3 class="membership-type card-title flex-center-start-row subtitle-2  mt-16 mb-16">Anual</h3>
+                <h3 class="price title-1 card-title flex-center-center-row mb-16">$3,000.00 MXN</h3>
+                <h3 class="price text-medium card-title flex-center-center-row mb-24">Ahorra hasta 2 meses</h3>
                 <ul class="flex-start-start-column">
                     <li class="flex-center-start-row mb-16">
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                        <svg class="not-available svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                             <path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/>
                         </svg>
                         <a class="text-medium">Anuncios</a>
