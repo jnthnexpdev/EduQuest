@@ -1,12 +1,12 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-import { LoginComponent } from '../../../auth/components/login/login.component';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
-
 import { Router } from '@angular/router';
+
+import { LoginComponent } from '../../../auth/components/login/login.component';
 import { PlansComponent } from '../../../shared/components/plans/plans.component';
 import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
 
@@ -27,6 +27,7 @@ export class HomePageComponent implements OnInit{
     private systemService : SystemService,
     private alertService : AlertService,
     private router: Router
+  
     ){}
   
     ngOnInit() : void {
