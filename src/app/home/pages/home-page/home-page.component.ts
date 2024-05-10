@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { LoginComponent } from '../../../auth/components/login/login.component';
 import { PlansComponent } from '../../../shared/components/plans/plans.component';
 import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
+import { FooterComponent } from "../../../shared/components/footer/footer.component";
 
 
 @Component({
@@ -16,7 +17,7 @@ import { CategoriesComponent } from '../../../shared/components/categories/categ
     standalone: true,
     templateUrl: './home-page.component.html',
     styleUrl: './home-page.component.css',
-    imports: [NgClass, CategoriesComponent, PlansComponent]
+    imports: [NgClass, CategoriesComponent, PlansComponent, FooterComponent]
 })
 export class HomePageComponent implements OnInit{
 
@@ -52,5 +53,11 @@ export class HomePageComponent implements OnInit{
       }
   }
   
+  scrollToCategories() {
+    const element = document.getElementById('categories');
+    if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
 }

@@ -39,9 +39,10 @@ main{
     background: -webkit-linear-gradient(to bottom, var(--black) 15%, var(--indigo) 90%, var(--indigo) 100%);
     background: linear-gradient(to bottom, var(--black) 15%, var(--indigo) 90%, var(--indigo) 100%);   
 }
-.title-2{
+.title-4{
     color: var(--white);
     text-align: center;
+    
 }
 .inp-search {width: 38%;}  
 .inp-search input {width: 100%;}   

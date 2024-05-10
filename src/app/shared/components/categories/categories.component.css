@@ -5,7 +5,9 @@
 }
 .dark-theme .card-category:hover{border:solid 2px var(--indigo-light); } 
 .dark-theme svg{fill: var(--indigo-light);}
+.dark-theme h2{color:var(--white)}
 
+h2{color:var(--white)}
 
 .card-category {
     padding: 30px;
@@ -20,3 +22,9 @@
 }
 
 svg {fill: var(--indigo);}
+
+section{
+    background: var(--black);
+}
+
+
