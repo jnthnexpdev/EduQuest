@@ -35,15 +35,13 @@ main{
     min-height: 93dvh; 
     height: auto;
     padding: 24px;
-    background: var(--black);
-    background: -webkit-linear-gradient(to bottom, var(--black) 15%, var(--indigo) 90%, var(--indigo) 100%);
-    background: linear-gradient(to bottom, var(--black) 15%, var(--indigo) 90%, var(--indigo) 100%);   
+    background-image: linear-gradient(to bottom, var(--black), var(--indigo), var(--black)); 
 }
 .title-4{
     color: var(--white);
     text-align: center;
     
 }
-.inp-search {width: 38%;}  
+.inp-search {width: 38%; margin-top: 48px;}  
 .inp-search input {width: 100%;}   
 

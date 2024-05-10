@@ -1,0 +1,38 @@
+.dark-theme .card-category{ 
+    background-color: var(--black); 
+    color: var(--white);
+    border:solid 2px var(--black);
+}
+
+footer{
+    width: 100%;
+    padding: 8px 0;
+    background-color: var(--gray);
+}
+
+ul{
+    width: 100%;
+    padding-bottom: 24px;
+}
+li{
+    width: 400px;
+}
+
+svg{
+    width: 32px;
+    height: 32px;
+    margin-right: 24px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+svg:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+a{ cursor: pointer;}
+a:hover{ color: var(--indigo); }
+
+.logo{ color: var(--indigo-light); }
+.logo{ margin: 0 16px; width: 200px; }
