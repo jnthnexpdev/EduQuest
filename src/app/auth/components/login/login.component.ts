@@ -1,6 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit, signal } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,9 +17,11 @@ export class LoginComponent implements OnInit{
   public hidePassword = signal(true);
   public showRegisterForm = false;
   public showForm = true;
+ 
 
   constructor(
-    private systemService : SystemService
+    private systemService : SystemService,
+    private router : Router,
   ){}
 
   ngOnInit() : void {
@@ -31,6 +34,11 @@ export class LoginComponent implements OnInit{
     this.darkTheme.set(this.systemService.getThemeState());
   }
 
+  redirectToCourses() {
+    console.log('Redirigiendo a cursos');
+    this.router.navigate(['cursos/inicio']);
+  }  
+  
   togglePassword(): void {
     if(this.hidePassword() === true){
       this.hidePassword.set(false);
