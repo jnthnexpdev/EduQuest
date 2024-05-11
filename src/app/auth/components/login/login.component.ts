@@ -42,6 +42,10 @@ export class LoginComponent implements OnInit{
   }
 
   redirectToCourses() {
+<<<<<<< HEAD
+=======
+    console.log('Redirigiendo a cursos');
+>>>>>>> d9a068d293e141428cd360bb4fb45a9ec7b006b6
     this.router.navigate(['/cursos/inicio']);
   }  
   
