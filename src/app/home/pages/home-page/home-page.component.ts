@@ -42,8 +42,9 @@ export class HomePageComponent implements OnInit{
     }
 
     login() : void{
-        // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
-        this.matDialog.open(LoginComponent);
+      //this.router.navigate(['/cursos/inicio']);
+      // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
+      this.matDialog.open(LoginComponent);
     }
 
     scrollToPlans() {
