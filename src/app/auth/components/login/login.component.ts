@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
 
   redirectToCourses() {
     console.log('Redirigiendo a cursos');
-    this.router.navigate(['cursos/inicio']);
+    this.router.navigate(['/cursos/inicio']);
   }  
   
   togglePassword(): void {
