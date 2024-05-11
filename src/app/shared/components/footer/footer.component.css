@@ -1,13 +1,8 @@
-.dark-theme .card-category{ 
-    background-color: var(--black); 
-    color: var(--white);
-    border:solid 2px var(--black);
-}
 
 footer{
     width: 100%;
-    padding: 8px 0;
-    background-color: var(--gray);
+    padding: 24px 0;
+    background-color: var(--black);
 }
 
 ul{
@@ -24,6 +19,7 @@ svg{
     margin-right: 24px;
     margin-left: 24px;
     cursor: pointer;
+    fill: var(--white);
 }
 
 svg:hover{
@@ -31,8 +27,17 @@ svg:hover{
     transform: scale(1.1);
 }
 
-a{ cursor: pointer;}
+a{ cursor: pointer; color: var(--white);}
 a:hover{ color: var(--indigo); }
+
+p{color: var(--white);}
 
 .logo{ color: var(--indigo-light); }
 .logo{ margin: 0 16px; width: 200px; }
+
+
+hr.style {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+}

@@ -1,7 +1,8 @@
-.scroll-top-button {
+.dark-theme .scroll-top-button { background: var(--indigo-light);}
 
+.scroll-top-button {
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     right: 30px;
     background: var(--indigo);
     color: var(--white);

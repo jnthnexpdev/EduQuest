@@ -173,10 +173,8 @@ input::placeholder{
 }
 .inp-form:focus{ border: 2px solid var(--indigo); }
 
-
-
 .inp-search {position: relative;}
-.inp-search input {width: calc(100% - 24px);padding:8px 32px 8px 32px;}
+.inp-search input {width: calc(100% - 24px);padding:12px 32px 12px 32px;}
 .inp-search svg {
     width: 16px;
     height: 16px;
