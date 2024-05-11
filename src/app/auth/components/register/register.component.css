@@ -1,0 +1,41 @@
+.dark-theme{
+    background-color: var(--black);
+}
+.dark-theme h3{ color: var(--indigo-light); }
+.dark-theme a{ color: var(--white); }
+.dark-theme a:hover{ color: var(--indigo-light); }
+.dark-theme input[type=checkbox]{ accent-color: var(--indigo-light); }
+.dark-theme input[type=checkbox]:checked ~ label{ color: var(--indigo-light); }
+.dark-theme .btn-close svg, .btn-close{fill: var(--white); background-color: var(--black);}
+.dark-theme .btn-close svg:hover{fill: var(--indigo-light);}
+
+
+body{
+    min-width: 300px;
+    width: 400px;
+    max-width: 500px;
+}
+.login-form, .register, form{ width: 100%; }
+h3{ color: var(--indigo); }
+a{ color: var(--black);  cursor: pointer;}
+a:hover{ color: var(--indigo); }
+.field-form, .password-field-form, .inp-form{ width: 100%; }
+
+
+input[type="checkbox"]{
+    margin-right: 4px;
+    
+}
+input[type=checkbox] {
+    accent-color: var(--indigo);
+    color: var(--gray);
+   }
+input[type=checkbox]:checked ~ label {	color:var(--indigo) }
+
+
+.btn-close svg,.btn-close{
+    width: 24px;
+    height: 24px; 
+    fill: var(--indigo); 
+    background: none;
+}

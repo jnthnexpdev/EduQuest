@@ -3,18 +3,17 @@ import { Component, OnInit, signal } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RegisterComponent } from '../register/register.component';
 import { MatDialog } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-register',
   standalone: true,
   imports: [NgClass, FormsModule, ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './register.component.html',
+  styleUrl: './register.component.css'
 })
-export class LoginComponent implements OnInit {
-
+export class RegisterComponent implements OnInit {
   darkTheme = signal(false);
   public passwordInvalid = signal(false);
   public hidePassword = signal(true);
@@ -42,11 +41,6 @@ export class LoginComponent implements OnInit {
     this.darkTheme.set(this.systemService.getThemeState());
   }
 
-  redirectToCourses() {
-    this.router.navigate(['/cursos/inicio']);
-    this.matDialog.closeAll();
-  }
-
   togglePassword(): void {
     if (this.hidePassword() === true) {
       this.hidePassword.set(false);
@@ -54,14 +48,14 @@ export class LoginComponent implements OnInit {
       this.hidePassword.set(true);
     }
   }
-  Register() : void{
-    // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
-    this.matDialog.closeAll();
-    this.matDialog.open(RegisterComponent);
-  }
-
   closeForm() : void{
     this.matDialog.closeAll();
   }
+
+ login() : void{
+  this.matDialog.closeAll();
+  this.matDialog.open(LoginComponent);
+  
+ }
 
 }
