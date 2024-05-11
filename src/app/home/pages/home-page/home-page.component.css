@@ -30,13 +30,16 @@ body{
     min-height: 93dvh;
     background-color: var(--black);
 }
+
 main{
     width: 100%;
     min-height: 93dvh; 
     height: auto;
     padding: 24px;
-    background-image: linear-gradient(to bottom, var(--black), var(--indigo), var(--black)); 
+    background-image: linear-gradient(to bottom, var(--black), var(--indigo), var(--black));
+
 }
+
 .title-4{
     color: var(--white);
     text-align: center;
@@ -44,4 +47,7 @@ main{
 }
 .inp-search {width: 38%; margin-top: 48px;}  
 .inp-search input {width: 100%;}   
+
+
+
 

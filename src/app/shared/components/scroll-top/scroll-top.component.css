@@ -1,0 +1,13 @@
+.scroll-top-button {
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--indigo);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
