@@ -1,9 +1,10 @@
 import { Component, OnInit, signal } from '@angular/core';
 
 import { NgClass } from '@angular/common';
-
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
+
+
 
 @Component({
   selector: 'app-courses-page',
@@ -29,4 +30,6 @@ export class CoursesPageComponent implements OnInit {
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
+  
+
 }
