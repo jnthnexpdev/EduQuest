@@ -4,6 +4,7 @@ import { NgClass } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
+import { NavbarHomeComponent } from "../../../shared/components/navbar-home/navbar-home.component";
 import { CategoriesComponent } from "../../../shared/components/categories/categories.component";
 
 
@@ -13,7 +14,7 @@ import { CategoriesComponent } from "../../../shared/components/categories/categ
     standalone: true,
     templateUrl: './forum-page.component.html',
     styleUrl: './forum-page.component.css',
-    imports: [NgClass, CategoriesComponent]
+    imports: [NgClass, CategoriesComponent, NavbarHomeComponent]
 })
 export class ForumPageComponent  implements OnInit{
   

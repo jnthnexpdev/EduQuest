@@ -1,0 +1,68 @@
+import { Component, OnInit, signal } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+
+import { AlertService } from '../../../shared/services/alert/alert.service';
+import { SystemService } from '../../../shared/services/system/system.service';
+import { NgClass } from '@angular/common';
+import { Router } from '@angular/router';
+
+import { LoginComponent } from '../../../auth/components/login/login.component';
+import { PlansComponent } from '../../../shared/components/plans/plans.component';
+import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
+import { FooterComponent } from "../../../shared/components/footer/footer.component";
+
+@Component({
+  selector: 'app-navbar-home',
+  standalone: true,
+  imports: [NgClass, CategoriesComponent, PlansComponent, FooterComponent],
+  templateUrl: './navbar-home.component.html',
+  styleUrl: './navbar-home.component.css'
+})
+export class NavbarHomeComponent implements OnInit{
+
+  darkTheme = signal(false);
+
+
+  constructor(
+    private matDialog: MatDialog,
+    private systemService: SystemService,
+    private alertService: AlertService,
+    private router: Router
+
+  ) { }
+
+  ngOnInit(): void {
+    this.systemService.preferences$.subscribe((preferences: any) => {
+      this.getPreferences();
+    });
+  }
+
+  getPreferences() {
+    this.darkTheme.set(this.systemService.getThemeState());
+  }
+
+  login(): void {
+    // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
+    this.matDialog.open(LoginComponent);
+  }
+
+  scrollToPlans() {
+    const element = document.getElementById('plans');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollToCategories() {
+    const element = document.getElementById('categories');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  redirectToForum() {
+    this.router.navigate(['/foro/inicio']);
+  }
+
+
+}
