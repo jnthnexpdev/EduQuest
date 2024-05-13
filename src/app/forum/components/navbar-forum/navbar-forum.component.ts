@@ -1,21 +1,20 @@
 import { Component, OnInit, signal } from '@angular/core';
 
 import { NgClass } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
-import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
-import { NavbarCoursesComponent } from '../../../courses/components/navbar-courses/navbar-courses.component';
+
 
 @Component({
-  selector: 'app-courses-page',
+  selector: 'app-navbar-forum',
   standalone: true,
-  templateUrl: './courses-page.component.html',
-  styleUrl: './courses-page.component.css',
-  imports: [NgClass, CategoriesComponent, NavbarCoursesComponent],
+  imports: [NgClass],
+  templateUrl: './navbar-forum.component.html',
+  styleUrl: './navbar-forum.component.css'
 })
-export class CoursesPageComponent implements OnInit {
+export class NavbarForumComponent  implements OnInit {
 
   darkTheme = signal(false);
 
@@ -30,8 +29,17 @@ export class CoursesPageComponent implements OnInit {
       this.getPreferences();
     });
   }
+
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
-  
+
+  redirectToHome() {
+    this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 5000);
+    this.router.navigate(['/inicio']);
+  }
+
+  redirectToProfile() {
+    this.router.navigate(['/foro/perfil']);
+  }
 }

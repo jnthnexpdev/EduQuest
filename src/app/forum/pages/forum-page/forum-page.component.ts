@@ -5,8 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NavbarHomeComponent } from "../../../shared/components/navbar-home/navbar-home.component";
-import { CategoriesComponent } from "../../../shared/components/categories/categories.component";
-
+import { NavbarForumComponent } from "../../../forum/components/navbar-forum/navbar-forum.component";
 
 
 @Component({
@@ -14,7 +13,7 @@ import { CategoriesComponent } from "../../../shared/components/categories/categ
     standalone: true,
     templateUrl: './forum-page.component.html',
     styleUrl: './forum-page.component.css',
-    imports: [NgClass, CategoriesComponent, NavbarHomeComponent]
+    imports: [NgClass, NavbarHomeComponent, NavbarForumComponent ]
 })
 export class ForumPageComponent  implements OnInit{
   
@@ -33,10 +32,6 @@ export class ForumPageComponent  implements OnInit{
   }
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
-  }
-  redirectToHome() {
-    this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 5000);
-    this.router.navigate(['/inicio']);
   }
 
 }
