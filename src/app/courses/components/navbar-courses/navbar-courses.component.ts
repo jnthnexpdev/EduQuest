@@ -1,9 +1,9 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { NgClass } from '@angular/common';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-courses',
@@ -15,6 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class NavbarCoursesComponent implements OnInit {
 
   darkTheme = signal(false);
+  @Output() forumClicked = new EventEmitter<void>();
 
   constructor(
     private systemService: SystemService,
@@ -32,18 +33,25 @@ export class NavbarCoursesComponent implements OnInit {
   }
   
   redirectToHome() {
-    this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 5000);
+    // this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 500);
     this.router.navigate(['/inicio']);
   }
+  // redirectToForum() {
+  //   this.router.navigate(['/foro/inicio']);
+  // }
+
+  // redirectToForum(source: string) {
+  //   if (source === 'courses') {
+  //     this.router.navigate(['/foro/inicio']);
+  //   }
+  // }
+  
   redirectToForum() {
     this.router.navigate(['/foro/inicio']);
-  }
+}
 
+  
   redirectToProfile() {
     this.router.navigate(['/cursos/perfil']);
   }
-
- 
-  
-
 }

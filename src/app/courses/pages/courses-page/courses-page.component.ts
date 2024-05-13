@@ -18,11 +18,13 @@ import { NavbarCoursesComponent } from '../../../courses/components/navbar-cours
 export class CoursesPageComponent implements OnInit {
 
   darkTheme = signal(false);
-
+  isForumPage = false;
+  
   constructor(
     private systemService: SystemService,
     private alertService: AlertService,
     private router: Router,
+    
   ) { }
 
   ngOnInit(): void {

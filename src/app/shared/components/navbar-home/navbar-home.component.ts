@@ -1,35 +1,28 @@
-import { Component, OnInit, signal, ChangeDetectorRef  } from '@angular/core';
+import { Component, OnInit, signal, Output, EventEmitter  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-
+import { Router } from '@angular/router';
+import { NgClass } from '@angular/common';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
-import { NgClass } from '@angular/common';
-import { Router } from '@angular/router';
 
 import { LoginComponent } from '../../../auth/components/login/login.component';
-import { PlansComponent } from '../../../shared/components/plans/plans.component';
-import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
-import { FooterComponent } from "../../../shared/components/footer/footer.component";
 
 @Component({
   selector: 'app-navbar-home',
   standalone: true,
-  imports: [NgClass, CategoriesComponent, PlansComponent, FooterComponent],
   templateUrl: './navbar-home.component.html',
-  styleUrl: './navbar-home.component.css'
+  styleUrl: './navbar-home.component.css',
+  imports: [NgClass]
 })
 export class NavbarHomeComponent implements OnInit{
 
   darkTheme = signal(false);
-  showItems: boolean = true;
-
 
   constructor(
     private matDialog: MatDialog,
     private systemService: SystemService,
     private alertService: AlertService,
     private router: Router,
-
   ) { }
 
   ngOnInit(): void {
@@ -62,16 +55,24 @@ export class NavbarHomeComponent implements OnInit{
     }
   }
 
-  redirectToForum() {
-    this.showItems = false;
-    this.router.navigate(['/foro/inicio']);
-    console.log(this.showItems)
-  }
+  // redirectToForum() {
+  //   this.router.navigate(['/foro/inicio']);
+  // }
+// navbar-courses.component.ts
+// redirectToForum(source: string) {
+//   if (source === 'home') {
+//     this.router.navigate(['/foro/inicio']);
+//   }
+// }
+@Output() forumClicked = new EventEmitter<void>();
+
+redirectToForum() {
+  this.router.navigate(['/foro/inicio']);
+}
+
 
   redirectToInicio() {
-    this.showItems = true;
     this.router.navigate(['/inicio']);
-    console.log(this.showItems)
   }
 
 }

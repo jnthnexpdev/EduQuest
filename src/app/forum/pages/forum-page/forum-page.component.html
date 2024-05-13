@@ -1,4 +1,9 @@
+@if (isForumPage) {
+    <app-navbar-home (forumClicked)="onForumClicked()"></app-navbar-home>
+ }
+    
+ @if (isNavbarHome) {
+    <app-navbar-forum > </app-navbar-forum>
+ }
 
-<app-navbar-home></app-navbar-home>
-<app-navbar-forum></app-navbar-forum>
-
+ 

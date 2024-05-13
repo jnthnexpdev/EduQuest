@@ -5,28 +5,32 @@ header{
     padding: 8px 0;
     background-color: var(--black);
 }
+h1{ color: var(--indigo-light); }
+h1, button{ margin: 0 16px; width: 200px; }
+
 
 ul{
     list-style: none;
     text-decoration: none;
 }
-
-.li2{
-    width: 600px;
+ul li{ padding: 0 20px; height: 60px; }
+ul li svg{ fill: var(--white); }
+ul li a{
+    font-weight: 600;
+    color: var(--white);
+}
+li{
+    border-bottom: solid 2px var(--black);
 }
 
-svg:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-}
-svg{
-    width: 32px;
-    height: 32px;
-    margin-right: 24px;
-    margin-left: 24px;
-    cursor: pointer;
-    fill: var(--white);
-}
+.hover-effect:hover svg {fill: var(--indigo-light); cursor: pointer;}
+.hover-effect:hover a {color: var(--indigo-light); cursor: pointer;}
+.active-link { background-color: aqua;}
 
 .logo{ color: var(--indigo-light); }
 .logo{ margin: 0 16px; width: 200px; }
+
+
+svg {fill: var(--indigo);}
+
+ 
