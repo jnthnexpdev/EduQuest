@@ -42,4 +42,8 @@ export class NavbarForumComponent  implements OnInit {
   redirectToProfile() {
     this.router.navigate(['/foro/perfil']);
   }
+
+  redirectToCourses() {
+    this.router.navigate(['/cursos/inicio']);
+  }
 }
