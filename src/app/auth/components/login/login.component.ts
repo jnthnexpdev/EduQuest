@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   public passwordInvalid = signal(false);
   public hidePassword = signal(true);
   public loginForm !: FormGroup;
+  isUserLoggedIn: boolean = false; // Suponiendo que inicialmente el usuario no ha iniciado sesión
+
 
   constructor(
     private systemService: SystemService,
@@ -63,5 +65,5 @@ export class LoginComponent implements OnInit {
   closeForm() : void{
     this.matDialog.closeAll();
   }
-
+  
 }

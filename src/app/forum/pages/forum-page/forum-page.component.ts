@@ -38,4 +38,5 @@ export class ForumPageComponent  implements OnInit{
     this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 5000);
     this.router.navigate(['/inicio']);
   }
+
 }

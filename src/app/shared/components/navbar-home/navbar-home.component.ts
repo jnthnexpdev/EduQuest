@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, ChangeDetectorRef  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 import { AlertService } from '../../../shared/services/alert/alert.service';
@@ -21,13 +21,14 @@ import { FooterComponent } from "../../../shared/components/footer/footer.compon
 export class NavbarHomeComponent implements OnInit{
 
   darkTheme = signal(false);
+  showItems: boolean = true;
 
 
   constructor(
     private matDialog: MatDialog,
     private systemService: SystemService,
     private alertService: AlertService,
-    private router: Router
+    private router: Router,
 
   ) { }
 
@@ -44,6 +45,7 @@ export class NavbarHomeComponent implements OnInit{
   login(): void {
     // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
     this.matDialog.open(LoginComponent);
+
   }
 
   scrollToPlans() {
@@ -61,8 +63,15 @@ export class NavbarHomeComponent implements OnInit{
   }
 
   redirectToForum() {
+    this.showItems = false;
     this.router.navigate(['/foro/inicio']);
+    console.log(this.showItems)
   }
 
+  redirectToInicio() {
+    this.showItems = true;
+    this.router.navigate(['/inicio']);
+    console.log(this.showItems)
+  }
 
 }

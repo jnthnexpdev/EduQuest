@@ -8,9 +8,6 @@
 
 h2{color:var(--white)}
 svg {fill: var(--indigo);}
-section{
-  padding-top: 56px;
-}
 
 .grid-container-planes {
   display: grid;
