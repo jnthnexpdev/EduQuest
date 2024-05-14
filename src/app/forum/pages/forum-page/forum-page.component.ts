@@ -18,6 +18,9 @@ import { MenuDashboardComponent } from "../../../shared/components/menu-dashboar
 export class ForumPageComponent  implements OnInit{
   
   darkTheme = signal(false);
+  public logedUser =false;
+  
+
   constructor(
     private systemService: SystemService,
     private alertService: AlertService,
@@ -29,11 +32,18 @@ export class ForumPageComponent  implements OnInit{
   ngOnInit(): void {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
-    });
-    console.log(this.router.url);
+    }); 
+  
   }
+  
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
+
+
+
+  redirectToForum() {
+    this.router.navigate(['/foro/inicio']);
+}
 
 }

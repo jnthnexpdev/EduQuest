@@ -33,7 +33,6 @@ export class HomePageComponent implements OnInit {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
-    console.log(this.router.url);
   }
 
   getPreferences() {

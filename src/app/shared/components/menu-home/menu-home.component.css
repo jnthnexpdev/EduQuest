@@ -5,7 +5,7 @@ header{
     padding: 8px 0;
     background-color: var(--black);
 }
-h1{ color: var(--indigo-light); }
+h1{ color: var(--indigo-light); cursor: pointer;}
 h1, button{ margin: 0 16px; width: 200px; }
 h2{color:var(--white)}
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, signal  } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NgClass } from '@angular/common';
@@ -14,10 +14,10 @@ import { LoginComponent } from '../../../auth/components/login/login.component';
   styleUrl: './menu-home.component.css',
   imports: [NgClass]
 })
-export class MenuHomeComponent implements OnInit{
+export class MenuHomeComponent implements OnInit {
 
   public darkTheme = signal(false);
-  public isLogedUser  = false;
+  public showIcon = false;
 
   constructor(
     private matDialog: MatDialog,
@@ -30,11 +30,21 @@ export class MenuHomeComponent implements OnInit{
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
+    this.router.events.subscribe(() => {
+      this.updateIconState();
+    });
+    this.updateIconState();
   }
 
-  getPreferences(){
+  getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
+
+  updateIconState() {
+    const currentUrl = this.router.url;
+    this.showIcon = currentUrl.startsWith('/foro');
+  }
+
 
   login(): void {
     // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
@@ -55,17 +65,13 @@ export class MenuHomeComponent implements OnInit{
     }
   }
 
-redirectToForum() {
-  this.router.navigate(['/foro/inicio']);
-  console.log( this.isLogedUser)
-}
+  redirectToForum() {
+    this.router.navigate(['/foro/inicio']);
+  }
 
 
   redirectToInicio() {
     this.router.navigate(['/inicio']);
   }
-
-
-  
 
 }

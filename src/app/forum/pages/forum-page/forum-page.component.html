@@ -1,10 +1,10 @@
-@if (false) {
+@if (logedUser) {
     <app-menu-home></app-menu-home>
     
  }
 
- @else if(true) {
-   <app-menu-dashboard> </app-menu-dashboard>
+ @if (!logedUser) {
+   <app-menu-dashboard></app-menu-dashboard>
  }
     
 

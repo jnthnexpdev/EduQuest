@@ -11,6 +11,7 @@ import { ScrollTopComponent } from "./shared/components/scroll-top/scroll-top.co
     styleUrls: ['./app.component.css'],
     imports: [CommonModule, RouterOutlet, FooterComponent, ScrollTopComponent]
 })
+
 export class AppComponent {
   title = 'EduQuest';
 }

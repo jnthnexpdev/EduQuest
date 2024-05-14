@@ -16,9 +16,6 @@ import { SystemService } from '../../../shared/services/system/system.service';
 export class MenuDashboardComponent implements OnInit {
 
   darkTheme = signal(false);
-
-
-  public  = false;
   public showIcon = false;
 
 

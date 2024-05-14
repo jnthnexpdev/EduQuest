@@ -18,9 +18,6 @@ section {
     color: var(--indigo-light);
     cursor: pointer;
 }
-.active-link {
-    background-color: aqua;
-}
 .logo {
     color: var(--indigo-light);
 }
@@ -33,8 +30,7 @@ section {
 /* buscador*/
 .inp-search {
     width: 38%;
-    margin-top: 48px;
-    margin-bottom: 48px;
+
 }
 .inp-search input {
     width: 100%;
@@ -48,11 +44,20 @@ section {
 
 .card-courses {
     background-color: var(--white);
-    padding: 5px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in;
+    filter: saturate(1); 
 }
+
+.card-courses:hover{
+    transform: scale(1.05);
+    transition: .2s ease-out;
+    filter: saturate(1.8); 
+}
+
 .card-content {
-    padding-top: 5px;
+    padding: 5px;
 }
 .card-courses svg {
     fill: var(--white);
@@ -66,13 +71,16 @@ section {
 }
 img {
     width: 100%;
-    height: 130px;
+    height: 150px;
     object-fit: cover;
+}
+.text-medium{
+    font-weight: 600;
 }
 
 select{
     background-color: var(--indigo);
-    width: 120px;
+    width: 150px;
     margin-left: 5px;
     margin-right: 5px;
     color: var(--white);
@@ -81,12 +89,14 @@ select{
 
 }
 
+
 /* cards carrusel*/
+
 .carousel {
     overflow: hidden;
 }
 .card-category {
-    width: 200px;
+    width: 220px;
     height: 80px;
     margin: 16px;
     background-color: var(--white);
@@ -115,3 +125,19 @@ select{
     width: 24px;
     height: 24px;
 }
+
+
+/* paginado fake */
+.paginado-fake{
+    color: var(--white);
+}
+.select-page{
+    background-color: var(--indigo);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+p{
+    margin: 0 10px;
+}
+button{width: 80px;}
