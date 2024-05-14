@@ -16,7 +16,7 @@ import { LoginComponent } from '../../../auth/components/login/login.component';
 })
 export class NavbarHomeComponent implements OnInit{
 
-  darkTheme = signal(false);
+  public darkTheme = signal(false);
 
   constructor(
     private matDialog: MatDialog,
@@ -29,9 +29,10 @@ export class NavbarHomeComponent implements OnInit{
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
+    
   }
 
-  getPreferences() {
+  getPreferences(){
     this.darkTheme.set(this.systemService.getThemeState());
   }
 

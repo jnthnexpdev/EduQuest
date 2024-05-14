@@ -29,7 +29,10 @@ li{
 
 .logo{ color: var(--indigo-light); }
 .logo{ margin: 0 16px; width: 200px; }
-
+ul .item-selected a{
+    color: var(--indigo);
+}
+ul .item-selected svg{ fill: var(--indigo); }
 
 svg {fill: var(--indigo);}
 

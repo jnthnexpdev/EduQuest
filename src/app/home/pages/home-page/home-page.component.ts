@@ -8,6 +8,7 @@ import { PlansComponent } from '../../../shared/components/plans/plans.component
 import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
 import { FooterComponent } from "../../../shared/components/footer/footer.component";
 import { NavbarHomeComponent } from "../../../shared/components/navbar-home/navbar-home.component";
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -21,7 +22,7 @@ export class HomePageComponent implements OnInit {
   darkTheme = signal(false);
 
   constructor(
-
+    private router : Router,
     private systemService: SystemService,
     private alertService: AlertService,
 
@@ -31,6 +32,7 @@ export class HomePageComponent implements OnInit {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
+    console.log(this.router.url);
   }
 
   getPreferences() {
