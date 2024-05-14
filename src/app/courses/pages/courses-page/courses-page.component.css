@@ -1,51 +1,106 @@
-body{
+body {
     background-color: var(--black);
 }
-section{
+
+section {
     width: 80%;
     margin: 0 auto;
     background-color: var(--black);
 }
 
-.hover-effect:hover svg {fill: var(--indigo-light); cursor: pointer;}
-.hover-effect:hover a {color: var(--indigo-light); cursor: pointer;}
-.active-link { background-color: aqua;}
 
-.logo{ color: var(--indigo-light); }
-.logo{ margin: 0 16px; width: 200px; }
-
-
-.inp-search {width: 38%; margin-top: 48px;}  
-.inp-search input {width: 100%;}   
-
-.inp-serch svg {fill: var(--indigo);}
-
-
-.card-courses{
- background-color: var(--white);
- padding: 5px;
+/* barra de mavagacion*/
+.hover-effect:hover svg {
+    fill: var(--indigo-light);
+    cursor: pointer;
+}
+.hover-effect:hover a {
+    color: var(--indigo-light);
+    cursor: pointer;
+}
+.active-link {
+    background-color: aqua;
+}
+.logo {
+    color: var(--indigo-light);
+}
+.logo {
+    margin: 0 16px;
+    width: 200px;
 }
 
-.card-content{
+
+/* buscador*/
+.inp-search {
+    width: 38%;
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+.inp-search input {
+    width: 100%;
+}
+.inp-serch svg {
+    fill: var(--indigo);
+}
+
+
+/* cards cursos */
+
+.card-courses {
+    background-color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+}
+.card-content {
     padding-top: 5px;
-   }
-
-
-
+}
 .card-courses svg {
     fill: var(--white);
     width: 16px;
     height: 16px;
 }
-
 .card-courses button {
     fill: var(--white);
     width: 32px;
     height: 32px;
 }
-
-img{
+img {
     width: 100%;
-    height: 150px ;
+    height: 130px;
     object-fit: cover;
+}
+
+
+/* cards carrusel*/
+.carousel {
+    overflow: hidden;
+}
+.card-category {
+    width: 200px;
+    height: 80px;
+    margin: 16px;
+    background-color: var(--white);
+    color: var(--black);
+    border: solid 2px var(--white);
+    border-radius: 5px;
+}
+.card-category:hover {
+    cursor: pointer;
+    border: solid 2px var(--indigo-light);
+}
+.nav-button {
+    background-color: var(--indigo);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.card-container svg {
+    fill: var(--white);
+    width: 24px;
+    height: 24px;
+}
+.nav-button:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
 }

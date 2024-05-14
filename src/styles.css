@@ -39,7 +39,7 @@
 .text-large, .inp-form, .inp-search{ font-size: 18px; }
 .text-medium{ font-size: 16px; }
 .text-small, .btn-primary{ font-size: 14px; }
-.text-extra-small{font-size: 10px;}
+.text-extra-small{font-size: 12px;}
 
 /* Contenedores */
 .container{
@@ -139,7 +139,7 @@
 .grid-container-courses {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 24px;
+    grid-gap: 32px;
 }
 
 
