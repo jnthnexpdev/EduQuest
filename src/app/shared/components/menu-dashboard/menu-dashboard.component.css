@@ -25,14 +25,13 @@ li{
 
 .hover-effect:hover svg {fill: var(--indigo-light); cursor: pointer;}
 .hover-effect:hover a {color: var(--indigo-light); cursor: pointer;}
-.active-link { background-color: aqua;}
+
+ul .item-selected svg{fill: var(--indigo-light);}
+ul .item-selected a{color: var(--indigo-light);}
 
 .logo{ color: var(--indigo-light); }
 .logo{ margin: 0 16px; width: 200px; }
-ul .item-selected a{
-    color: var(--indigo);
-}
-ul .item-selected svg{ fill: var(--indigo); }
+
 
 svg {fill: var(--indigo);}
 

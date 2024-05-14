@@ -5,7 +5,7 @@ import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
-import { NavbarCoursesComponent } from '../../../courses/components/navbar-courses/navbar-courses.component';
+import { MenuDashboardComponent } from '../../../shared/components/menu-dashboard/menu-dashboard.component';
 
 interface Card {
   title: string;
@@ -17,7 +17,7 @@ interface Card {
   standalone: true,
   templateUrl: './courses-page.component.html',
   styleUrls: ['./courses-page.component.css'],
-  imports: [NgClass, CategoriesComponent, NavbarCoursesComponent],
+  imports: [NgClass, CategoriesComponent, MenuDashboardComponent],
 })
 export class CoursesPageComponent implements OnInit {
 

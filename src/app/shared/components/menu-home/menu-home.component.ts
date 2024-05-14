@@ -2,21 +2,22 @@ import { Component, OnInit, signal, Output, EventEmitter  } from '@angular/core'
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NgClass } from '@angular/common';
-import { AlertService } from '../../../shared/services/alert/alert.service';
-import { SystemService } from '../../../shared/services/system/system.service';
+import { AlertService } from '../../services/alert/alert.service';
+import { SystemService } from '../../services/system/system.service';
 
 import { LoginComponent } from '../../../auth/components/login/login.component';
 
 @Component({
-  selector: 'app-navbar-home',
+  selector: 'app-menu-home',
   standalone: true,
-  templateUrl: './navbar-home.component.html',
-  styleUrl: './navbar-home.component.css',
+  templateUrl: './menu-home.component.html',
+  styleUrl: './menu-home.component.css',
   imports: [NgClass]
 })
-export class NavbarHomeComponent implements OnInit{
+export class MenuHomeComponent implements OnInit{
 
   public darkTheme = signal(false);
+  public isLogedUser  = false;
 
   constructor(
     private matDialog: MatDialog,
@@ -29,7 +30,6 @@ export class NavbarHomeComponent implements OnInit{
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
-    
   }
 
   getPreferences(){
@@ -41,7 +41,6 @@ export class NavbarHomeComponent implements OnInit{
     this.matDialog.open(LoginComponent);
 
   }
-
   scrollToPlans() {
     const element = document.getElementById('plans');
     if (element) {
@@ -56,17 +55,6 @@ export class NavbarHomeComponent implements OnInit{
     }
   }
 
-  // redirectToForum() {
-  //   this.router.navigate(['/foro/inicio']);
-  // }
-// navbar-courses.component.ts
-// redirectToForum(source: string) {
-//   if (source === 'home') {
-//     this.router.navigate(['/foro/inicio']);
-//   }
-// }
-@Output() forumClicked = new EventEmitter<void>();
-
 redirectToForum() {
   this.router.navigate(['/foro/inicio']);
 }
@@ -75,5 +63,19 @@ redirectToForum() {
   redirectToInicio() {
     this.router.navigate(['/inicio']);
   }
+
+
+  redirectToForumLoged() {
+    this.isLogedUser = true;
+    this.router.navigate(['/foro/inicio']);
+    console.log(this.isLogedUser)
+  }
+  
+  redirectToForumNoLoged() {
+    this.isLogedUser = false;
+    this.router.navigate(['/foro/inicio']);
+    console.log(this.isLogedUser)
+  }
+  
 
 }

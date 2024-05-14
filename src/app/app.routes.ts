@@ -22,6 +22,10 @@ export const routes: Routes = [
         loadChildren : () => import('./admin/admin.module').then(m => m.AdminModule)
     },
     {
+        path : 'eduquest',
+        loadChildren : () => import('./shared/shared.module').then(m => m.SharedModule)
+    },
+    {
         path : '',
         redirectTo : '/inicio',
         pathMatch : 'full'

@@ -1,12 +1,12 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
-import { NavbarCoursesComponent } from "../../../courses/components/navbar-courses/navbar-courses.component";
+import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
 
 @Component({
   selector: 'app-profile-courses',
   standalone: true,
-  imports: [NgClass, NavbarCoursesComponent],
+  imports: [NgClass, MenuDashboardComponent],
   templateUrl: './profile-courses.component.html',
   styleUrl: './profile-courses.component.css'
 })

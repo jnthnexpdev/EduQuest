@@ -1,12 +1,12 @@
 import { Component, OnInit, signal} from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
-import { NavbarForumComponent } from "../../../forum/components/navbar-forum/navbar-forum.component";
+import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
 
 @Component({
   selector: 'app-profile-forum',
   standalone: true,
-  imports: [NgClass, NavbarForumComponent ],
+  imports: [NgClass, MenuDashboardComponent ],
   templateUrl: './profile-forum.component.html',
   styleUrl: './profile-forum.component.css'
 })
