@@ -30,6 +30,7 @@ export class ForumPageComponent  implements OnInit{
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
+    console.log(this.router.url);
   }
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());

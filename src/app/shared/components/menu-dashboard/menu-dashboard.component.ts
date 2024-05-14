@@ -16,7 +16,11 @@ import { SystemService } from '../../../shared/services/system/system.service';
 export class MenuDashboardComponent implements OnInit {
 
   darkTheme = signal(false);
-  public isLogedUser  = false;
+
+
+  public  = false;
+  public showIcon = false;
+
 
   constructor(
     private systemService: SystemService,
@@ -28,10 +32,22 @@ export class MenuDashboardComponent implements OnInit {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
+    this.router.events.subscribe(() => {
+      this.updateIconState();
+    });
+    this.updateIconState();
   }
+
+  
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
+  
+  updateIconState() {
+    const currentUrl = this.router.url;
+    this.showIcon = currentUrl.startsWith('/foro');
+  }
+  
   
   redirectToHome() {
     // this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 500);
@@ -39,10 +55,13 @@ export class MenuDashboardComponent implements OnInit {
   }
 
   redirectToForum() {
-    this.isLogedUser = true;
     this.router.navigate(['/foro/inicio']);
-    console.log(this.isLogedUser)
-}
+  }
+  
+  redirectToCourses() {
+    this.router.navigate(['/cursos/inicio']);
+  }
+  
 
   
 }

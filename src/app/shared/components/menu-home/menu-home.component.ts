@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, signal  } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { NgClass } from '@angular/common';
@@ -57,6 +57,7 @@ export class MenuHomeComponent implements OnInit{
 
 redirectToForum() {
   this.router.navigate(['/foro/inicio']);
+  console.log( this.isLogedUser)
 }
 
 
@@ -65,17 +66,6 @@ redirectToForum() {
   }
 
 
-  redirectToForumLoged() {
-    this.isLogedUser = true;
-    this.router.navigate(['/foro/inicio']);
-    console.log(this.isLogedUser)
-  }
-  
-  redirectToForumNoLoged() {
-    this.isLogedUser = false;
-    this.router.navigate(['/foro/inicio']);
-    console.log(this.isLogedUser)
-  }
   
 
 }
