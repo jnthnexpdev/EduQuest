@@ -73,7 +73,7 @@ export class ProfileComponent implements OnInit {
   private updateProfileView(): void {
     const currentUrl = this.router.url;
 
-    if (currentUrl.includes('cursos')) {
+    if (currentUrl.includes('cursos') || this.route.snapshot.queryParams['from'] === 'cursos') {
       this.showCoursesProfile = true;
       this.showForumProfile = false;
     } else if (currentUrl.includes('foro')) {
