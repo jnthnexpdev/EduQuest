@@ -19,7 +19,7 @@ export class MenuHomeComponent implements OnInit {
 
   public darkTheme = signal(false);
   showIcon: boolean = false;
-
+  public isAuth = signal(false);
 
   constructor(
     private matDialog: MatDialog,
@@ -46,6 +46,7 @@ export class MenuHomeComponent implements OnInit {
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
+
 
   updateIconState() {
     const currentUrl = this.router.url;

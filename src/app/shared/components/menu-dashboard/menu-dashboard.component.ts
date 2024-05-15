@@ -1,5 +1,5 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 import { NgClass } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
@@ -13,20 +13,21 @@ import { ProfileCoursesComponent } from '../../../courses/components/profile-cou
 @Component({
   selector: 'app-menu-dashboard',
   standalone: true,
-  imports: [NgClass, RouterLink, RouterLinkActive, NotificationsComponent,ProfileForumComponent,ProfileCoursesComponent],
+  imports: [NgClass, NotificationsComponent, ProfileForumComponent, ProfileCoursesComponent],
   templateUrl: './menu-dashboard.component.html',
   styleUrl: './menu-dashboard.component.css'
 })
 export class MenuDashboardComponent implements OnInit {
 
   darkTheme = signal(false);
-  public showIcon = false;
+  showIcon: boolean = false;
+  currentContext: string = 'cursos';
   
 
   constructor(
     private systemService: SystemService,
     private alertService: AlertService,
-    private authService : AuthServiceService,
+    private authService: AuthServiceService,
     private router: Router,
     private matDialog: MatDialog,
   ) { }
@@ -36,24 +37,35 @@ export class MenuDashboardComponent implements OnInit {
       this.getPreferences();
     });
 
-    this.router.events.subscribe(() => {
-      this.updateIconState();
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.updateIconState();
+        this.updateContext(); 
+      }
     });
     this.updateIconState();
+    this.updateContext();
   }
 
-  
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
 
   updateIconState() {
     const currentUrl = this.router.url;
-    this.showIcon = currentUrl.startsWith('/foro');
+    this.showIcon = currentUrl.startsWith('/foro') && currentUrl !== '/cursos';
   }
-  
+
+  updateContext() {
+    const currentUrl = this.router.url;
+    if (currentUrl.includes('foro')) {
+      this.currentContext = 'foro';
+    } else if (currentUrl.includes('cursos')) {
+      this.currentContext = 'cursos';
+    }
+  }
+
   redirectToHome() {
-    // this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 500);
     this.authService.userLogOut();
     this.router.navigate(['/inicio']);
   }
@@ -66,9 +78,8 @@ export class MenuDashboardComponent implements OnInit {
     this.router.navigate(['/cursos/inicio']);
   }
 
-
   navigateToProfile(from: string): void {
+    this.currentContext = from;
     this.router.navigate(['/eduquest/perfil'], { queryParams: { from: from } });
   }
-  
 }

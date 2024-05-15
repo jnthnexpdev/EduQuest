@@ -49,11 +49,12 @@ export class LoginComponent implements OnInit {
     this.authService.userLogin();
 
     const currentUrl = this.router.url; 
-    
+
     if (currentUrl.includes('foro')) {
       this.router.navigate(['/foro/inicio']);
+      window.location.reload();
     } else {
-      this.router.navigate(['/cursos/inicio']);
+      this.router.navigate(['/cursos/inicio']);  
     }
     this.matDialog.closeAll();
   }

@@ -6,7 +6,7 @@ import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { MenuHomeComponent } from "../../../shared/components/menu-home/menu-home.component";
 import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
-import { Subscription } from 'rxjs';
+import { Subscription, window } from 'rxjs';
 import { AuthServiceService } from '../../../auth/services/auth/auth-service.service';
 
 
@@ -35,12 +35,14 @@ export class ForumPageComponent  implements OnInit{
   ){}
 
   ngOnInit(): void {
+   
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     }); 
 
     this.authService.logged$.subscribe((preferences: any) => {
       this.updateSession();
+      
     }); 
 
     this.updateSession();
@@ -56,6 +58,7 @@ export class ForumPageComponent  implements OnInit{
 
   redirectToForum() {
     this.router.navigate(['/foro/inicio']);
+    
 }
 
 }
