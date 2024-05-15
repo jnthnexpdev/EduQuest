@@ -19,6 +19,7 @@ export class ProfileComponent implements OnInit {
   profileImage: string = '/assets/img/profile/user.png';
   originalProfileImage: string = '/assets/img/profile/user.png';
   showSaveButton: boolean = false;
+  ShowContent = signal(true);
 
 
   constructor(
@@ -51,4 +52,13 @@ export class ProfileComponent implements OnInit {
     this.profileImage = this.originalProfileImage; // Restaura la imagen original
     this.showSaveButton = false;
   }
+
+  ContentCards() : void {
+    if(this.ShowContent() === false){
+       this.ShowContent.set(true);
+       console.log(this.ShowContent())
+      }else{
+      this.ShowContent.set(false);
+      console.log(this.ShowContent())
+  }}
 }

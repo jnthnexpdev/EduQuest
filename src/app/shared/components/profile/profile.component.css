@@ -6,17 +6,19 @@ body{
 }
 
 section{
-    width: 40%;
+  
     margin: 0 auto;
 }
 
 /* foto de perfil */
 .card-general-profile{
     text-align: center;
-    padding: 72px 250px;
+    width: 100%;
+    height: 550px;
+    /* padding: 72px 250px; */
     border-radius: 8px;
     background: rgb(71,2,108);
-    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 50%);
+    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 30%);
 }                                                                                                               
 
 .card-general-profile img{
@@ -61,20 +63,37 @@ label{
 
 /* planes */
 
-/* .card-plans {
-    background-color: var(--white);
-    padding: 10px 5 0px;
-    margin: 10px;
-    border-radius: 8px;
-} */
-
 .card-plans  {
+    width: 300px;
+    position: relative;
     background-color: var(--gray);
-    padding: 10px 80px;
+    padding: 10px;
     margin: 10px;
     border-radius: 8px;
 }
 
+.status-card  {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .not-available{
+    fill: var(--red);
+  }
+
+  .show-more{
+    color: var(--white);
+    cursor: pointer;
+    
+  }
+
+  .show-more:hover{
+    color: var(--white);
+    transform: scale(1.05);
+    text-decoration-line: underline;
+  }
 /* estilos suscripcion actual */
 .current-card {
     border:solid 5px var(--indigo);
@@ -88,6 +107,7 @@ label{
     transform: none;
     cursor: auto;
     }
+
 
 
 
