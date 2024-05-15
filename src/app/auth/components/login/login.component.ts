@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, OnInit, signal } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterComponent } from '../register/register.component';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,23 +12,22 @@ import { AuthServiceService } from '../../services/auth/auth-service.service';
   standalone: true,
   imports: [NgClass, FormsModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
   darkTheme = signal(false);
   public passwordInvalid = signal(false);
   public hidePassword = signal(true);
-  public loginForm !: FormGroup;
-  isUserLoggedIn: boolean = false; // Suponiendo que inicialmente el usuario no ha iniciado sesión
+  public loginForm!: FormGroup;
 
 
   constructor(
     private systemService: SystemService,
     private formBuilder: FormBuilder,
-    private authService : AuthServiceService,
-    private matDialog : MatDialog,
-    private router: Router,
+    private authService: AuthServiceService,
+    private matDialog: MatDialog,
+    private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
       correo: ['', [Validators.required, Validators.pattern(/^[a-zA-Z0-9_%+-][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)]],
@@ -48,7 +47,14 @@ export class LoginComponent implements OnInit {
 
   redirectToCourses() {
     this.authService.userLogin();
-    this.router.navigate(['/cursos/inicio']);
+
+    const currentUrl = this.router.url; 
+    
+    if (currentUrl.includes('foro')) {
+      this.router.navigate(['/foro/inicio']);
+    } else {
+      this.router.navigate(['/cursos/inicio']);
+    }
     this.matDialog.closeAll();
   }
 
@@ -59,14 +65,13 @@ export class LoginComponent implements OnInit {
       this.hidePassword.set(true);
     }
   }
-  Register() : void{
-    // this.alertService.error('Revisa tu informacion y vuelve a intentarlo', 5000);
+
+  Register(): void {
     this.matDialog.closeAll();
     this.matDialog.open(RegisterComponent);
   }
 
-  closeForm() : void{
+  closeForm(): void {
     this.matDialog.closeAll();
   }
-  
 }

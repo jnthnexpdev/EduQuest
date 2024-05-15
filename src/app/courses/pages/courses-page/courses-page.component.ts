@@ -25,10 +25,10 @@ interface Card {
 export class CoursesPageComponent implements OnInit {
 
   darkTheme = signal(false);
-  isForumPage = false;
   public isAuth = signal(false);
   public userLoggedSubscription: Subscription | undefined;
   public logedUser =false;
+  
   currentIndex: number = 0;
 
   cards: Card[] = [

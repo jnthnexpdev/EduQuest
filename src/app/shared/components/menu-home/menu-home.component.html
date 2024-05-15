@@ -1,5 +1,6 @@
 <header [ngClass]="darkTheme() ? 'dark-theme flex-center-between-row' : 'flex-center-between-row' ">
     <h1 class="title-1" (click)="redirectToInicio()"> EduQuest </h1>
+
     @if(!showIcon){
         <ul class="flex-center-between-row">
             <li class="flex-center-start-row" (click)="scrollToCategories()">

@@ -206,7 +206,15 @@ input::placeholder{
 
 /* Selectores */
 .select-form{}
-.select-filter{}
+
+.select-filter select{
+    background-color: var(--indigo);
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--white);
+    padding: 8px;
+    border-radius: 4px;
+}
 
 /* Botones */
 button:hover{
