@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RegisterComponent } from '../register/register.component';
 import { MatDialog } from '@angular/material/dialog';
+import { AuthServiceService } from '../../services/auth/auth-service.service';
 
 @Component({
   selector: 'app-login',
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private systemService: SystemService,
     private formBuilder: FormBuilder,
+    private authService : AuthServiceService,
     private matDialog : MatDialog,
     private router: Router,
   ) {
@@ -45,6 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   redirectToCourses() {
+    this.authService.userLogin();
     this.router.navigate(['/cursos/inicio']);
     this.matDialog.closeAll();
   }

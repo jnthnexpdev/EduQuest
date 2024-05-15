@@ -1,11 +1,5 @@
-@if (logedUser) {
-    <app-menu-home></app-menu-home>
-    
- }
-
- @if (!logedUser) {
-   <app-menu-dashboard></app-menu-dashboard>
- }
-    
-
- 
+@if (!isAuth()) {
+  <app-menu-home></app-menu-home>
+}@else{
+  <app-menu-dashboard></app-menu-dashboard>
+}

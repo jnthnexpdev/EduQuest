@@ -6,6 +6,8 @@ import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { MenuHomeComponent } from "../../../shared/components/menu-home/menu-home.component";
 import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
+import { Subscription } from 'rxjs';
+import { AuthServiceService } from '../../../auth/services/auth/auth-service.service';
 
 
 @Component({
@@ -18,29 +20,39 @@ import { MenuDashboardComponent } from "../../../shared/components/menu-dashboar
 export class ForumPageComponent  implements OnInit{
   
   darkTheme = signal(false);
+  public isAuth = signal(false);
+  public userLoggedSubscription: Subscription | undefined;
   public logedUser =false;
   
 
   constructor(
     private systemService: SystemService,
     private alertService: AlertService,
+    private authService : AuthServiceService,
     private router: Router,
     private route: ActivatedRoute, 
 
-  ) { }
+  ){}
 
   ngOnInit(): void {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     }); 
-  
+
+    this.authService.logged$.subscribe((preferences: any) => {
+      this.updateSession();
+    }); 
+
+    this.updateSession();
   }
   
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
 
-
+  updateSession(){
+    this.isAuth.set(this.authService.userIsLogged());
+  }
 
   redirectToForum() {
     this.router.navigate(['/foro/inicio']);

@@ -4,6 +4,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
+import { AuthServiceService } from '../../../auth/services/auth/auth-service.service';
 
 
 @Component({
@@ -22,6 +23,7 @@ export class MenuDashboardComponent implements OnInit {
   constructor(
     private systemService: SystemService,
     private alertService: AlertService,
+    private authService : AuthServiceService,
     private router: Router,
   ) { }
 
@@ -48,6 +50,7 @@ export class MenuDashboardComponent implements OnInit {
   
   redirectToHome() {
     // this.alertService.question('Saldrás de tu sesión actual ¿Deseas continuar?', 500);
+    this.authService.userLogOut();
     this.router.navigate(['/inicio']);
   }
 
