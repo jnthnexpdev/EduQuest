@@ -7,11 +7,13 @@ import { AlertService } from '../../../shared/services/alert/alert.service';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { AuthServiceService } from '../../../auth/services/auth/auth-service.service';
 import { NotificationsComponent } from '../../../forum/components/notifications/notifications.component';
+import { ProfileForumComponent } from '../../../forum/components/profile-forum/profile-forum.component';
+import { ProfileCoursesComponent } from '../../../courses/components/profile-courses/profile-courses.component';
 
 @Component({
   selector: 'app-menu-dashboard',
   standalone: true,
-  imports: [NgClass, RouterLink, RouterLinkActive, NotificationsComponent],
+  imports: [NgClass, RouterLink, RouterLinkActive, NotificationsComponent,ProfileForumComponent,ProfileCoursesComponent],
   templateUrl: './menu-dashboard.component.html',
   styleUrl: './menu-dashboard.component.css'
 })
@@ -65,6 +67,8 @@ export class MenuDashboardComponent implements OnInit {
   }
 
 
-
+  navigateToProfile(from: string): void {
+    this.router.navigate(['/eduquest/perfil'], { queryParams: { from: from } });
+  }
   
 }

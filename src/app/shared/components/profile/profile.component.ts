@@ -5,13 +5,15 @@ import { MenuDashboardComponent } from '../../../shared/components/menu-dashboar
 import { ProfileCoursesComponent } from '../../../courses/components/profile-courses/profile-courses.component';
 import { ProfileForumComponent } from '../../../forum/components/profile-forum/profile-forum.component';
 import { PlansComponent } from '../../../shared/components/plans/plans.component';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-profile',
   standalone: true,
   imports: [NgClass, MenuDashboardComponent, ProfileCoursesComponent, ProfileForumComponent, PlansComponent],
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.css'
+  styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
 
@@ -20,16 +22,27 @@ export class ProfileComponent implements OnInit {
   originalProfileImage: string = '/assets/img/profile/user.png';
   showSaveButton: boolean = false;
   ShowContent = signal(false);
-
+  showCoursesProfile = false;
+  showForumProfile = false;
 
   constructor(
-    private systemService: SystemService
+    private systemService: SystemService,
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
     });
+
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.updateProfileView();
+    });
+
+    this.updateProfileView();
   }
 
   getPreferences() {
@@ -49,16 +62,26 @@ export class ProfileComponent implements OnInit {
   }
 
   cancel(): void {
-    this.profileImage = this.originalProfileImage; // Restaura la imagen original
+    this.profileImage = this.originalProfileImage;
     this.showSaveButton = false;
   }
 
-  ContentCards() : void {
-    if(this.ShowContent() === false){
-       this.ShowContent.set(true);
-       console.log(this.ShowContent())
-      }else{
-      this.ShowContent.set(false);
-      console.log(this.ShowContent())
-  }}
+  ContentCards(): void {
+    this.ShowContent.set(!this.ShowContent());
+  }
+
+  private updateProfileView(): void {
+    const currentUrl = this.router.url;
+
+    if (currentUrl.includes('cursos')) {
+      this.showCoursesProfile = true;
+      this.showForumProfile = false;
+    } else if (currentUrl.includes('foro')) {
+      this.showCoursesProfile = false;
+      this.showForumProfile = true;
+    } else {
+      this.showCoursesProfile = false;
+      this.showForumProfile = false;
+    }
+  }
 }

@@ -144,16 +144,18 @@
                 <a (click)="ContentCards()" class="show-more text-small" >Ocultar</a>
                 }
         </div>
-
-        <!-- Fin de Sección de planes -->
     </section>
+<section>
+    @if (showForumProfile) {
+        <app-profile-forum></app-profile-forum>
+    }
+
+    @if (showCoursesProfile) {
+        <app-profile-courses></app-profile-courses>
+    }
+</section>
+
 </body>
 
 
 
-
-
-
-<!-- <app-profile-courses></app-profile-courses>
-
-<app-profile-forum></app-profile-forum>  -->

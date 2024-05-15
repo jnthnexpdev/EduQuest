@@ -21,6 +21,10 @@
                 </svg>
                 <a class="text-medium">Mis cursos</a>
             </li>
+            <li class="flex-center-start-row hover-effect" (click)="navigateToProfile('cursos')">
+                <img class="header" src="/assets/img/profile/user.png" alt="">
+                <a class="text-medium">Perfil</a>
+              </li>
         }
         @if (showIcon) {  
             <li class="flex-center-start-row hover-effect" routerLink="/foro/inicio"routerLinkActive="item-selected" >
@@ -41,11 +45,11 @@
                 </svg>
                 <a class="text-medium">Notificaciones</a>
             </li>
-            }
-            <li  routerLink="/eduquest/perfil" routerLinkActive="item-selected" class="flex-center-start-row hover-effect">
+            <li class="flex-center-start-row hover-effect" (click)="navigateToProfile('foro')">
                 <img class="header" src="/assets/img/profile/user.png" alt="">
                 <a class="text-medium">Perfil</a>
-            </li>
+              </li>
+            }
 
             <li class="flex-center-start-row hover-effect">
                 <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
