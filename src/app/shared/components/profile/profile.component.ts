@@ -76,7 +76,7 @@ export class ProfileComponent implements OnInit {
     if (currentUrl.includes('cursos') || this.route.snapshot.queryParams['from'] === 'cursos') {
       this.showCoursesProfile = true;
       this.showForumProfile = false;
-    } else if (currentUrl.includes('foro')) {
+    } else if (currentUrl.includes('foro' )) {
       this.showCoursesProfile = false;
       this.showForumProfile = true;
     } else {
