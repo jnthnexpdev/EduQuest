@@ -1,9 +1,11 @@
 
 <body>
 <!-- header -->
-
-<app-menu-dashboard></app-menu-dashboard>
-
+@if (!isAuth()) {
+    <app-menu-home></app-menu-home>
+  }@else{
+    <app-menu-dashboard></app-menu-dashboard>
+  }
 <!-- input de busqueda -->
 
 <section class="flex-center-center-column">

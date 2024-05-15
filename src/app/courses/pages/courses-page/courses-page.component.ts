@@ -6,6 +6,9 @@ import { SystemService } from '../../../shared/services/system/system.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriesComponent } from '../../../shared/components/categories/categories.component';
 import { MenuDashboardComponent } from '../../../shared/components/menu-dashboard/menu-dashboard.component';
+import { MenuHomeComponent } from "../../../shared/components/menu-home/menu-home.component";
+import { AuthServiceService } from '../../../auth/services/auth/auth-service.service';
+import { Subscription } from 'rxjs';
 
 interface Card {
   title: string;
@@ -13,17 +16,20 @@ interface Card {
 }
 
 @Component({
-  selector: 'app-courses-page',
-  standalone: true,
-  templateUrl: './courses-page.component.html',
-  styleUrls: ['./courses-page.component.css'],
-  imports: [NgClass, CategoriesComponent, MenuDashboardComponent],
+    selector: 'app-courses-page',
+    standalone: true,
+    templateUrl: './courses-page.component.html',
+    styleUrls: ['./courses-page.component.css'],
+    imports: [NgClass, CategoriesComponent, MenuDashboardComponent, MenuHomeComponent]
 })
 export class CoursesPageComponent implements OnInit {
 
   darkTheme = signal(false);
   isForumPage = false;
-  
+  public isAuth = signal(false);
+  public userLoggedSubscription: Subscription | undefined;
+  public logedUser =false;
+  currentIndex: number = 0;
 
   cards: Card[] = [
     { title: 'Gastronomía', icon: this.sanitizer.bypassSecurityTrustHtml(`<svg class="svg-header" fill="#47026cff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 0C400 0 288 32 288 176V288c0 35.3 28.7 64 64 64h22V480c0 17.7 14.3 32 32 32s32-14.3 32-32V352 240 32c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7V480c0 17.7 14.3 32 32 32s32-14.3 32-32V255.6c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16V150.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8V16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>`) },
@@ -35,8 +41,7 @@ export class CoursesPageComponent implements OnInit {
     { title: 'Idiomas', icon: this.sanitizer.bypassSecurityTrustHtml(`<svg class="svg-header" fill="#47026cff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1H257c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/></svg>`) },
     { title: 'Música', icon: this.sanitizer.bypassSecurityTrustHtml(`<svg class="svg-header" fill="#47026cff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M465 7c-9.4-9.4-24.6-9.4-33.9 0L383 55c-2.4 2.4-4.3 5.3-5.5 8.5l-15.4 41-77.5 77.6c-45.1-29.4-99.3-30.2-131 1.6c-11 11-18 24.6-21.4 39.6c-3.7 16.6-19.1 30.7-36.1 31.6c-25.6 1.3-49.3 10.7-67.3 28.6C-16 328.4-7.6 409.4 47.5 464.5s136.1 63.5 180.9 18.7c17.9-17.9 27.4-41.7 28.6-67.3c.9-17 15-32.3 31.6-36.1c15-3.4 28.6-10.5 39.6-21.4c31.8-31.8 31-85.9 1.6-131l77.6-77.6 41-15.4c3.2-1.2 6.1-3.1 8.5-5.5l48-48c9.4-9.4 9.4-24.6 0-33.9L465 7zM208 256a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>`) },
   ];
-
-  currentIndex: number = 0;
+  
 
   get visibleCards(): Card[] {
     return this.cards.slice(this.currentIndex, this.currentIndex + 6);
@@ -46,18 +51,30 @@ export class CoursesPageComponent implements OnInit {
     private systemService: SystemService,
     private alertService: AlertService,
     private router: Router,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private authService : AuthServiceService,
   ) { }
 
   ngOnInit(): void {
     this.systemService.preferences$.subscribe((preferences: any) => {
       this.getPreferences();
-    });
+    }); 
+
+    this.authService.logged$.subscribe((preferences: any) => {
+      this.updateSession();
+    }); 
+
+    this.updateSession();
   }
 
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
   }
+
+  updateSession(){
+    this.isAuth.set(this.authService.userIsLogged());
+  }
+
 
   nextCard(): void {
     if (this.currentIndex < this.cards.length - 6) {

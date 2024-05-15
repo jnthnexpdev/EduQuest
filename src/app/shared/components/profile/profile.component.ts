@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
   profileImage: string = '/assets/img/profile/user.png';
   originalProfileImage: string = '/assets/img/profile/user.png';
   showSaveButton: boolean = false;
-  ShowContent = signal(true);
+  ShowContent = signal(false);
 
 
   constructor(

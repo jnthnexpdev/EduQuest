@@ -137,10 +137,10 @@
                     <button class="btn-primary">comprar</button>
                 </div>
             </div>
-            @if (ShowContent()) {
+            @if (!ShowContent()) {
             <a (click)="ContentCards()" class="show-more text-small" >Ver más</a>
             }
-            @if (!ShowContent()) {
+            @if (ShowContent()) {
                 <a (click)="ContentCards()" class="show-more text-small" >Ocultar</a>
                 }
         </div>
