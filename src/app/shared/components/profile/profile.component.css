@@ -59,22 +59,35 @@ label{
 }
 
 
-/* plames */
+/* planes */
 
-.card-plans {
+/* .card-plans {
     background-color: var(--white);
     padding: 10px 5 0px;
     margin: 10px;
     border-radius: 8px;
-}
+} */
+
 .card-plans  {
-    background-color: var(--white);
+    background-color: var(--gray);
     padding: 10px 80px;
     margin: 10px;
     border-radius: 8px;
 }
 
-
+/* estilos suscripcion actual */
+.current-card {
+    border:solid 5px var(--indigo);
+    border-radius: 8px;
+  }
+  .current-card button{
+    background-color: var(--dark);
+    color: var(--gray);
+  }
+  .current-card button:hover{
+    transform: none;
+    cursor: auto;
+    }
 
 
 
