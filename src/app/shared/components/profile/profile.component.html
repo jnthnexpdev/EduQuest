@@ -1,9 +1,51 @@
 <app-menu-dashboard></app-menu-dashboard>
 
-<h1>CONTENIDO GENERAL DE PERFIL</h1>
-<h5>falta validad que mostrar dependiendo de de que secion ha elegido :((( </h5>
+<body>
+    <section>
+        <div class="flex-center-center-column">
+            <div class="card-general-profile">
+                <img id="profile-image" class="mb-16" [src]="profileImage" alt="Foto de perfil">
+                <p class="mb-16">Jesus Benardo Noriega Gutierrez</p>
+                <p class="mb-16">19690212&#64;tecnm.mx</p>
+                <p class="mb-16">10/10/2029</p>
+                <div class="mt-24">
+                    @if (!showSaveButton) {
+                        <label for="file-input" class="custom-file-label">Cambiar foto de perfil</label>
+                        <input type="file" id="file-input" style="display: none;" (change)="onFileSelected($event)">
+                    }
+                    @if (showSaveButton) {
+                        <button class="btn-save">Guardar</button>
+                        <button class="btn-cancel" (click)="cancel()">Cancelar</button>
+                    }
+                </div>
+            </div>
+
+            <div class="flex-center-between-row">
+                <div class=" card-plans flex-center-center-column">
+                    <h2>Gratis</h2>
+                    <p>0.00MXN</p>
+                    <button class="btn-primary">comprar</button>
+                </div>
+                <div class=" card-plans flex-center-center-column">
+                    <h2>Gratis</h2>
+                    <p>0.00MXN</p>
+                    <button class="btn-primary">comprar</button>
+                </div>
+                <div class=" card-plans flex-center-center-column">
+                    <h2>Gratis</h2>
+                    <p>0.00MXN</p>
+                    <button class="btn-primary">comprar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 
 
-<app-profile-courses></app-profile-courses>
 
-<app-profile-forum></app-profile-forum> 
+
+
+
+<!-- <app-profile-courses></app-profile-courses>
+
+<app-profile-forum></app-profile-forum>  -->

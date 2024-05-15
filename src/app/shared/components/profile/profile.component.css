@@ -1,0 +1,80 @@
+
+body{
+    background-color: var(--black);
+        /* background: rgb(71,2,108);
+    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 50%); */
+}
+
+section{
+    width: 40%;
+    margin: 0 auto;
+}
+
+/* foto de perfil */
+.card-general-profile{
+    text-align: center;
+    padding: 72px 250px;
+    border-radius: 8px;
+    background: rgb(71,2,108);
+    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 50%);
+}                                                                                                               
+
+.card-general-profile img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* datos del usuario*/
+.card-general-profile p{
+    color: var(--white);
+}
+
+label{
+    background-color: var(--indigo);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--white);
+}
+
+
+/* botones del input de imagnenes*/
+.btn-save {
+    background-color: var(--indigo);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--white);
+    margin: 0 10px;
+}
+
+.btn-cancel {
+    background-color: var(--black);
+    border: solid 2px var(--indigo);
+    padding: 9px;
+    border-radius: 8px;
+    color: var(--white);
+    margin: 0 10px;
+}
+
+
+/* plames */
+
+.card-plans {
+    background-color: var(--white);
+    padding: 10px 5 0px;
+    margin: 10px;
+    border-radius: 8px;
+}
+.card-plans  {
+    background-color: var(--white);
+    padding: 10px 80px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+
+
+
+

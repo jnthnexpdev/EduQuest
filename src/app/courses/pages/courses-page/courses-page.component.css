@@ -137,7 +137,7 @@ select{
     height: 32px;
     border-radius: 50%;
 }
-p{
+.paginado-fake > p{
     margin: 0 10px;
 }
 button{width: 80px;}
