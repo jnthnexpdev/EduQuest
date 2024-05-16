@@ -17,7 +17,7 @@ h2{color:var(--white)}
 
 .title-4{
     color: var(--white);
-    text-align: center; 
+    text-align: center;     
 }
 .inp-search {width: 38%; margin-top: 48px;}  
 .inp-search input {width: 100%;}   
