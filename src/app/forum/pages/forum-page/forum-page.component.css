@@ -82,6 +82,9 @@ input{
     margin-bottom: 5px;
     background-color: var(--gray);
 }
+input::placeholder{
+   text-align: center;
+}
 
 .button-comment:hover{
   transform: scale(1.1);
