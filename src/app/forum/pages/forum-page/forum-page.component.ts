@@ -21,6 +21,7 @@ export class ForumPageComponent  implements OnInit{
   
   darkTheme = signal(false);
   public isAuth = signal(false);
+  ShowContent = signal(false);
   public userLoggedSubscription: Subscription | undefined;
   public logedUser =false;
   
@@ -50,6 +51,10 @@ export class ForumPageComponent  implements OnInit{
   
   getPreferences() {
     this.darkTheme.set(this.systemService.getThemeState());
+  }
+
+  ContentCards(): void {
+    this.ShowContent.set(!this.ShowContent());
   }
 
   updateSession(){
