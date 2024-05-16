@@ -89,6 +89,14 @@
     justify-content: flex-end;
     flex-direction: row;
 }
+.flex-start-center-row{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+}
+
 .flex-center-center-column{
     display: flex;
     align-items: center;
@@ -111,6 +119,12 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    flex-direction: column;
+}
+.flex-center-between-column{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 
