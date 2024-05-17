@@ -83,4 +83,8 @@
       this.currentContext = from;
       this.router.navigate(['/eduquest/perfil'], { queryParams: { from: from } });
     }
+    redirectToSettings() {
+      this.router.navigate(['/eduquest/ajustes']);
+    }
+
   }
