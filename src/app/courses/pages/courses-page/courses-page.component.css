@@ -89,7 +89,7 @@ select{
     overflow: hidden;
 }
 .card-category {
-    width: 220px;
+    width: 30   0px;
     height: 80px;
     margin: 16px;
     background-color: var(--white);
@@ -133,4 +133,4 @@ select{
 .paginado-fake > p{
     margin: 0 10px;
 }
-button{width: 80px;}
+button{width: 80px; margin: 0 10px;}

@@ -1,155 +1,175 @@
 @if (!isAuth()) {
-  <app-menu-home></app-menu-home>
+<app-menu-home></app-menu-home>
 }@else{
-  <app-menu-dashboard></app-menu-dashboard>
+<app-menu-dashboard></app-menu-dashboard>
 }
 
-<body class="flex-start-center-row">  
-    
+<body class="flex-start-center-row">
+
     <aside>
-      
-      <table>
-        <thead>
-            <tr>
-                <th>Categoria</th>
-                <th>Publicaciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Musica</td>
-                <td >20</td>
-            </tr>
-            <tr>
-                <td>Cocina</td>
-                <td >34</td>
-            </tr>
-            <tr>
-                <td>Programación</td>
-                <td >56</td>
-            </tr>
-            <tr>
-              <td>Musica</td>
-              <td >20</td>
-          </tr>
-          <tr>
-              <td>Cocina</td>
-              <td >34</td>
-          </tr>
-          <tr>
-              <td>Programación</td>
-              <td >56</td>
-          </tr>
-          <tr>
-            <td>Musica</td>
-            <td >20</td>
-        </tr>
-        <tr>
-            <td>Cocina</td>
-            <td >34</td>
-        </tr>
-        <tr>
-            <td>Programación</td>
-            <td >56</td>
-        </tr>
-        </tbody>
-    </table>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Publicaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Musica</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Cocina</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Programación</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>Musica</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Cocina</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Programación</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <td>Musica</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Cocina</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Programación</td>
+                    <td>56</td>
+                </tr>
+            </tbody>
+        </table>
     </aside>
     <section class="flex-center-between-column">
-     <!-- <textarea  class="mb-24" id=""></textarea> -->
-     <img class="mb-24" src="/assets/img/editor.png" alt="">
+        <!-- <textarea  class="mb-24" id=""></textarea> -->
+        <img class="mb-24" src="/assets/img/editor.png" alt="">
 
 
 
 
- <!-- Filtros cards  -->
+        <!-- Filtros cards  -->
 
-    <div class="select-filter flex-center-center-row text-extra-small mt-24 mb-24">
-        <div class="inp-search" >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-            </svg>
-            <input type="text" class="inp-form" placeholder="Buscar">
+        <div class="select-filter flex-center-center-row text-extra-small mt-24 mb-24">
+            <div class="inp-search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+                <input type="text" class="inp-form" placeholder="Buscar">
+            </div>
+            <select name="filtro-1">
+                <option value="none" selected>Fecha</option>
+                <option value="value1">2022</option>
+                <option value="value2">2023</option>
+                <option value="value3">2024</option>
+            </select>
+
+            <select name="filtro-3">
+                <option value="none" selected>Categoría</option>
+                <option value="value1">Gastronomía</option>
+                <option value="value2">Salud y Deportes</option>
+                <option value="value3">Marketing y Ventas</option>
+                <option value="value4">Finanzas</option>
+                <option value="value5">Programación</option>
+                <option value="value6">Diseño</option>
+                <option value="value7">Idiomas</option>
+                <option value="value8">Música</option>
+            </select>
         </div>
-    <select name="filtro-1">
-        <option value="none" selected>Fecha</option>
-        <option value="value1" >2022</option>
-        <option value="value2">2023</option>
-        <option value="value3">2024</option>
-      </select>
 
-      <select name="filtro-3">
-        <option value="none" selected>Categoría</option>
-        <option value="value1" >Gastronomía</option>
-        <option value="value2">Salud y Deportes</option>
-        <option value="value3">Marketing y Ventas</option>
-        <option value="value4">Finanzas</option>
-        <option value="value5">Programación</option>
-        <option value="value6">Diseño</option>
-        <option value="value7">Idiomas</option>
-        <option value="value8">Música</option>
-      </select>
-    </div>
-
-     <div class=" post-forum mb-24">
-        <div class="header-post flex-center-between-row">
-            <span class="flex-center-center-row">
-                <img src="/assets/img/profile/user.png" alt="">
-                <p class="text-large">&#64;Yisus</p>
-            </span>
-            <span>
-                <h2 class="text-large">Categorias</h2>
-            </span>
-            <span>
-                <ul class="flex-center-center-row">
-                    <li>
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                            <path d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z"/>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z"/>
-                        </svg>
-                    </li>
-                    <li>
-                        <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
-                        </svg>
-                    </li>
-                </ul>
-            </span>
-        </div>
-        <div class=" content-post flex-center-between-column">
-            <div class="content-text title-comment mt-8" >
-                <span class="flex-center-between-row">
-                    <h3 class="text-large">¿Cómo puedo centrar un div?</h3>  
-                    <h3 class="text-large">12/12/2029</h3> 
+        <div class=" post-forum mb-24">
+            <div class="header-post flex-center-between-row">
+                <span class="flex-center-center-row">
+                    <img src="/assets/img/profile/user2.jpeg" alt="">
+                    <p class="text-large">&#64;Yisus</p>
                 </span>
                 <span>
-                    <P class="text-medium mt-16">Hamas gano combinando una fuerte resistencia contra la ocupacion militar con la creacion de organizaciones sociales de base y de servicio a los pobres, una plataforma y una practica que probablemente haria ganar votos en cualquier lugar. La victoria electoral de Hamas es ominosa pero comprensible, a la luz de los acontecimientos. Es enteramente justo describir a Hamas como fundamentalista, extremista y violentista, y como una seria amenaza a la paz y a un acuerdo politicamente justo. Sin embargo, es útil recordar que en aspectos importantes, Hamas no es tan extremista como otros. Por ejemplo, declara que estaría de acuerdo con una tregua con Israel sobre la base de la frontera reconocida a nivel internacional antes de la guerra arabe-israeli de junio de l967. ..
-                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen enormes asentamientos y proyectos de infraestructura para apoderarse de las tierras y los recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un Estado". Si se hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos sentiriamos, con razon, horrorizados. Pero con ese tipo de propuestas, la posicion de Hamas seria esencialmente igual a la de Estados Unidos e Israel.</P>
+                    <h2 class="text-large">Programación</h2>
+                </span>
+                <span>
+                    <ul class="flex-center-center-row">
+                        <li>
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                <path
+                                    d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                            </svg>
+                        </li>
+                    </ul>
                 </span>
             </div>
-            <div class="comment flex-center-center-row mt-8">
-                <input type="text" placeholder=" Comentar"  >
-                <svg class=" button-comment svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                    <path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
-                </svg>
+            <div class=" content-post flex-center-between-column">
+                <div class="content-text title-comment mt-8">
+                    <span class="flex-center-between-row">
+                        <h3 class="text-large">¿Cómo puedo centrar un div?</h3>
+                        <h3 class="text-large">12/12/2029</h3>
+                    </span>
+                    <span>
+                        <P class="text-medium mt-16">Hamas gano combinando una fuerte resistencia contra la ocupacion
+                            militar con la creacion de organizaciones sociales de base y de servicio a los pobres, una
+                            plataforma y una practica que probablemente haria ganar votos en cualquier lugar. La
+                            victoria electoral de Hamas es ominosa pero comprensible, a la luz de los acontecimientos.
+                            Es enteramente justo describir a Hamas como fundamentalista, extremista y violentista, y
+                            como una seria amenaza a la paz y a un acuerdo politicamente justo. Sin embargo, es útil
+                            recordar que en aspectos importantes, Hamas no es tan extremista como otros. Por ejemplo,
+                            declara que estaría de acuerdo con una tregua con Israel sobre la base de la frontera
+                            reconocida a nivel internacional antes de la guerra arabe-israeli de junio de l967. ..
+                            Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas
+                            permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente
+                            separados unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos
+                            construyen enormes asentamientos y proyectos de infraestructura para apoderarse de las
+                            tierras y los recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un
+                            Estado". Si se hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos
+                            sentiriamos, con razon, horrorizados. Pero con ese tipo de propuestas, la posicion de Hamas
+                            seria esencialmente igual a la de Estados Unidos e Israel.</P>
+                    </span>
+                </div>
+                <div class="comment flex-center-start-row mt-8">
+                    <input class="text-medium" type="text" placeholder=" Comentar">
+                    <svg class=" button-comment svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" />
+                    </svg>
 
-            </div>
-            <div class="content-comment flex-center-start-row">
-            <!-- AQUÍ -->
-            @if (!ShowContent()) {
-                <a (click)="ContentCards()" class="show-more text-small" >2 Comentarios</a>
-                }
-                @if (ShowContent()) {
-                    <a (click)="ContentCards()" class="show-more text-small" >Ocultar comentarios</a>
+                </div>
+
+                <div class="show-more-comment flex-center-start-row mt-8 mb-8">
+                    @if (!ShowContent1()) {
+                    <a (click)="ContentCards1()" class="text-small">2 Comentarios</a>
                     }
-            </div>
+                    @if (ShowContent1()) {
+                    <a (click)="ContentCards1()" class="text-small">Ocultar comentarios</a>
+                    }
+                </div>
 
-            @if (ShowContent()) {
-                <div class="header-comment flex-center-start-row mt-24">
+            @if (ShowContent1()) {
+                <div class="header-comment flex-center-start-row mt-16">
                     <span class="flex-center-center-row">
                         <img src="/assets/img/profile/user.png" alt="">
                         <p class="text-large">&#64;Yisus</p>
@@ -158,7 +178,8 @@
                         <ul class="flex-center-center-row">
                             <li>
                                 <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                    <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z"/>
+                                    <path
+                                        d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
                                 </svg>
                             </li>
                         </ul>
@@ -166,18 +187,172 @@
                     <span>
                         <p class="text-large"> 12/12/2029 </p>
                     </span>
-              
-            </div>
-            <div class="content-comment flex-center-end-row mb-8 mt-8">          
-                    <p>
-                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen enormes asentamientos y proyectos de infraestructura para apoderarse de las tierras y los recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un Estado". Si se hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos sentiriamos, con razon, horrorizados. Pero con ese tipo de propuestas, la 
-                    </p>              
-            </div>
-        }
+                </div>
 
+                <div class="content-comment flex-center-end-row mb-24">
+                    <p class="text-medium mt-16">
+                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas
+                        permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados
+                        unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen
+                        enormes asentamientos y proyectos de infraestructura para apoderarse de las tierras y los
+                        recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un Estado". Si se
+                        hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos sentiriamos, con
+                        razon, horrorizados. Pero con ese tipo de propuestas, la
+                    </p>
+                </div>
+
+                <div class="header-comment flex-center-start-row mt-16">
+                    <span class="flex-center-center-row">
+                        <img src="/assets/img/profile/user.png" alt="">
+                        <p class="text-large">&#64;Yisus</p>
+                    </span>
+                    <span>
+                        <ul class="flex-center-center-row">
+                            <li>
+                                <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </span>
+                    <span>
+                        <p class="text-large"> 12/12/2029 </p>
+                    </span>
+                </div>
+                
+                <div class="content-comment flex-center-end-row mb-24">
+                    <p class="text-medium mt-16">
+                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas
+                        permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados
+                        unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen
+                        enormes asentamientos y proyectos de infraestructura para apoderarse de las tierras y los
+                        recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un Estado". Si se
+                        hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos sentiriamos, con
+                        razon, horrorizados. Pero con ese tipo de propuestas, la
+                    </p>
+                </div>
+
+            }
+
+            </div>
         </div>
-     </div>
 
+
+    <!-- POST 2 -->
+
+        <div class=" post-forum mb-24">
+            <div class="header-post flex-center-between-row">
+                <span class="flex-center-center-row">
+                    <img src="/assets/img/profile/user.png" alt="">
+                    <p class="text-large">&#64;Yisus</p>
+                </span>
+                <span>
+                    <h2 class="text-large">Programación</h2>
+                </span>
+                <span>
+                    <ul class="flex-center-center-row">
+                        <li>
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                                <path
+                                    d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M512 240c0 114.9-114.6 208-256 208c-37.1 0-72.3-6.4-104.1-17.9c-11.9 8.7-31.3 20.6-54.3 30.6C73.6 471.1 44.7 480 16 480c-6.5 0-12.3-3.9-14.8-9.9c-2.5-6-1.1-12.8 3.4-17.4l0 0 0 0 0 0 0 0 .3-.3c.3-.3 .7-.7 1.3-1.4c1.1-1.2 2.8-3.1 4.9-5.7c4.1-5 9.6-12.4 15.2-21.6c10-16.6 19.5-38.4 21.4-62.9C17.7 326.8 0 285.1 0 240C0 125.1 114.6 32 256 32s256 93.1 256 208z" />
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path
+                                    d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                            </svg>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+            <div class=" content-post flex-center-between-column">
+                <div class="content-text title-comment mt-8">
+                    <span class="flex-center-between-row">
+                        <h3 class="text-large">¿Cómo puedo centrar un div?</h3>
+                        <h3 class="text-large">12/12/2029</h3>
+                    </span>
+                    <span>
+                        <P class="text-medium mt-16">Hamas gano combinando una fuerte resistencia contra la ocupacion
+                            militar con la creacion de organizaciones sociales de base y de servicio a los pobres, una
+                            plataforma y una practica que probablemente haria ganar votos en cualquier lugar. La
+                            tierras y los recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un
+                            Estado". Si se hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos
+                            sentiriamos, con razon, horrorizados. Pero con ese tipo de propuestas, la posicion de Hamas
+                            seria esencialmente igual a la de Estados Unidos e Israel.</P>
+                    </span>
+                </div>
+                <div class="comment flex-center-start-row mt-8">
+                    <input class="text-medium" type="text" placeholder=" Comentar">
+                    <svg class=" button-comment svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z" />
+                    </svg>
+
+                </div>
+
+                <div class="show-more-comment flex-center-start-row mt-8 mb-8">
+                    @if (!ShowContent2()) {
+                    <a (click)="ContentCards2()" class="text-small">1 Comentarios</a>
+                    }
+                    @if (ShowContent2()) {
+                    <a (click)="ContentCards2()" class="text-small">Ocultar comentarios</a>
+                    }
+                </div>
+
+            @if (ShowContent2()) {
+                <div class="header-comment flex-center-start-row mt-16">
+                    <span class="flex-center-center-row">
+                        <img src="/assets/img/profile/user.png" alt="">
+                        <p class="text-large">&#64;Yisus</p>
+                    </span>
+                    <span>
+                        <ul class="flex-center-center-row">
+                            <li>
+                                <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </span>
+                    <span>
+                        <p class="text-large"> 12/12/2029 </p>
+                    </span>
+                </div>
+
+                <div class="content-comment flex-center-end-row mb-24">
+                    <p class="text-medium mt-16">
+                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas
+                        permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados
+                        unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen
+                        enormes asentamientos y proyectos de infraestructura para apoderarse de las tierras y los
+                        recursos de Israel, Y que, ademas Hamas acepte llamar a esos fragmentos "un Estado". Si se
+                        hicieran propuestas para esta empobrecida "categoria de Estado", nosotros nos sentiriamos, con
+                        razon, horrorizados. Pero con ese tipo de propuestas, la
+                    </p>
+                </div>
+            }
+
+            </div>
+        </div>
+        <div class="paginado-fake flex-center-center-row mt-24">
+            <button class="btn-primary">Atras</button>
+            <P class="select-page flex-center-center-row">1</P>
+            <P> 2</P>
+            <P>3</P>
+            <P>4</P>
+            <P>5</P>
+            <P>6</P>
+            <button class="btn-primary">Siguiente</button>
+        </div>
     </section>
-  </body>
-  
+</body>
+

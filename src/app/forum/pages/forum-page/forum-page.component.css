@@ -48,13 +48,13 @@ textarea {
 .header-post{
     height: 40px;
     border-radius: 8px 8px 0px 0px;
-    background: rgb(71,2,108);
+    background-color: var(--indigo);
     background: radial-gradient(circle,var(--indigo) 0%, var(--black) 100%);
     color: var(--white);
 }
 
 .header-post  p, img, svg {
-    margin-left: 8px;
+    margin: 8px;
 }
 .content-post{
     width: 100%;
@@ -116,7 +116,6 @@ li{
     height: 34px;
     border-radius: 8px;
     margin-bottom: 0px;
-    background-color: var(--gray);
 }
 
 
@@ -159,3 +158,39 @@ select{
     padding-left: 4px;
     width: 100%;
 }
+
+.header-comment svg {
+fill: var(--indigo);
+stroke: var(--indigo);
+
+}
+
+
+.show-more-comment{
+    padding: 0 12px;
+    width: 100%;
+    cursor: pointer;
+}
+
+hr.style {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* paginado fake */
+.paginado-fake{
+    color: var(--white);
+}
+.select-page{
+    background-color: var(--indigo);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.paginado-fake > p{
+    margin: 0 10px;
+}
+button{width: 80px; margin: 0 10px;}

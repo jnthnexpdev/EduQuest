@@ -18,8 +18,8 @@ import { filter } from 'rxjs/operators';
 export class ProfileComponent implements OnInit {
 
   darkTheme = signal(false);
-  profileImage: string = '/assets/img/profile/user.png';
-  originalProfileImage: string = '/assets/img/profile/user.png';
+  profileImage: string = '/assets/img/profile/user2.jpeg';
+  originalProfileImage: string = '/assets/img/profile/user2.jpeg';
   showSaveButton: boolean = false;
   ShowContent = signal(false);
   showCoursesProfile = false;
