@@ -12,16 +12,6 @@
                 <p class="text-large mb-16">Jesus Benardo Noriega Gutierrez</p>
                 <p class="text-medium mb-16">19690212&#64;tecnm.mx</p>
                 <p class="text-small mb-16">10/10/2029</p>
-                <div class="mt-24">
-                    @if (!showSaveButton) {
-                        <label for="file-input" class="custom-file-label">Cambiar foto de perfil</label>
-                        <input type="file" id="file-input" style="display: none;" (change)="onFileSelected($event)">
-                    }
-                    @if (showSaveButton) {
-                        <button class="btn-save">Guardar</button>
-                        <button class="btn-cancel" (click)="cancel()">Cancelar</button>
-                    }
-                </div>
             </div>
 
             <!-- Fin Sección de imagen -->

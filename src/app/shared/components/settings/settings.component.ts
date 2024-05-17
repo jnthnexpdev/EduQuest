@@ -13,7 +13,11 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
     imports: [NgClass, MenuDashboardComponent]
 })
 export class SettingsComponent implements OnInit{
+
     darkTheme = signal(false);
+    profileImage: string = '/assets/img/profile/user2.jpeg';
+    originalProfileImage: string = '/assets/img/profile/user2.jpeg';
+    showSaveButton: boolean = false;
 
     constructor(
         private systemService: SystemService,
@@ -30,5 +34,29 @@ export class SettingsComponent implements OnInit{
     getPreferences() {
         this.darkTheme.set(this.systemService.getThemeState());
       }
+
+      onFileSelected(event: Event): void {
+        const input = event.target as HTMLInputElement;
+        if (input.files && input.files[0]) {
+          const reader = new FileReader();
+          reader.onload = () => {
+            this.profileImage = reader.result as string;
+            this.showSaveButton = true;
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    
+      cancel(): void {
+        this.profileImage = this.originalProfileImage;
+        this.showSaveButton = false;
+      }
+
+      toggleDarkMode(){
+        this.systemService.toggleTheme();
+        this.darkTheme.set(this.systemService.getThemeState());
+    }
+
+      
 
 }

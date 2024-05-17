@@ -1,0 +1,59 @@
+
+/* foto de perfil */
+.card-general-profile{
+    text-align: center;
+    width: 100%;
+    height: 550px;
+    /* padding: 72px 250px; */
+    border-radius: 8px;
+    background: rgb(71,2,108);
+    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 30%);
+}                                                                                                               
+
+.card-general-profile img{
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+/* datos del usuario*/
+.card-general-profile p{
+    color: var(--white);
+}
+
+label{
+    background-color: var(--indigo);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--white);
+}
+
+
+/* botones del input de imagnenes*/
+.btn-save {
+    background-color: var(--indigo);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--white);
+    margin: 0 10px;
+}
+
+.btn-cancel {
+    background-color: var(--black);
+    border: solid 2px var(--indigo);
+    padding: 9px;
+    border-radius: 8px;
+    color: var(--white);
+    margin: 0 10px;
+}
+
+.darkmode{
+    margin-top: 30px;
+    width: 100px;}
+
+.sun, .moon{
+    width: 24px;
+    height: 24px;
+}
