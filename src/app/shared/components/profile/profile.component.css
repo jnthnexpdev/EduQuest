@@ -78,7 +78,7 @@ section{
     border-radius: 8px;
   }
   .current-card button{
-    background-color: var(--dark);
+    background-color: var(--black);
     color: var(--gray);
   }
   .current-card button:hover{

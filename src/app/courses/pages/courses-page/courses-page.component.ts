@@ -44,7 +44,7 @@ export class CoursesPageComponent implements OnInit {
   
 
   get visibleCards(): Card[] {
-    return this.cards.slice(this.currentIndex, this.currentIndex + 6);
+    return this.cards.slice(this.currentIndex, this.currentIndex + 5);
   }
 
   constructor(
@@ -77,7 +77,7 @@ export class CoursesPageComponent implements OnInit {
 
 
   nextCard(): void {
-    if (this.currentIndex < this.cards.length - 6) {
+    if (this.currentIndex < this.cards.length - 5) {
       this.currentIndex++;
     }
   }

@@ -2,7 +2,6 @@
 .dark-theme .card-category button{background-color: var(--indigo-light);}
 .dark-theme .card-category:hover{border: solid 2px var(--indigo-light);}
 .dark-theme .nav-button svg{fill: var(--black);}
-.dark-theme .inp-search input {background-color: var(--dark);}
 .dark-theme .svg-header path {background-color: var(--indigo-light);}
  body {
     background-color: var(--black);
@@ -95,7 +94,7 @@ select{
     overflow: hidden;
 }
 .card-category {
-    width: 300px;
+    width: 350px;
     height: 80px;
     margin: 16px;
     background-color: var(--white);
@@ -108,8 +107,9 @@ select{
     border: solid 2px var(--indigo);
 }
 .nav-button {
+    width: 34px;
+    height: 34px;
     border: none;
-    padding: 10px;
     cursor: pointer;
     border-radius: 8px;
 }
