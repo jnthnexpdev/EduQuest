@@ -78,6 +78,11 @@
       this.router.navigate(['/cursos/inicio']);
     }
 
+        
+    redirectToUserCourses() {
+      this.router.navigate(['/cursos/mis-cursos']);
+    }
+
     navigateToProfile(from: string): void {
       this.currentContext = from;
       this.router.navigate(['/eduquest/perfil'], { queryParams: { from: from } });
