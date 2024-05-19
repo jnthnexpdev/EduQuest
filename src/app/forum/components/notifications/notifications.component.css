@@ -1,6 +1,60 @@
-.notifications-panel {
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  }
+.dark-theme .popup{background-color: var(--dark);}
+.dark-theme .popup-arrow{  border-bottom: 10px solid var(--dark);}
+.dark-theme li{background-color: var(--black);}
+
+
+.popup {
+  background-color: var(--white);
+  padding: 10px;
+  width: 350px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 15px 40px rgba(0,0,0,0.2), -0px -15px 40px rgba(0,0,0,0.2);
+}
+
+.popup-arrow {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--white);
+  position: absolute;
+  top: -10px; 
+  left: 20px; 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px 0;
+  background-color: var(--gray);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+svg {
+  fill: var(--red);
+  width: 16px;
+  height: 16px;
+  margin: 4px;
+}
+
+svg:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}

@@ -22,7 +22,7 @@
     darkTheme = signal(false);
     showIcon: boolean = false;
     currentContext: string = 'cursos';
-    
+    showPopup = false;
 
     constructor(
       private systemService: SystemService,
@@ -65,7 +65,6 @@
         this.currentContext = 'cursos';
       }
     }
-
     redirectToHome() {
       this.authService.userLogOut();
       this.router.navigate(['/inicio']);
@@ -83,8 +82,13 @@
       this.currentContext = from;
       this.router.navigate(['/eduquest/perfil'], { queryParams: { from: from } });
     }
-    redirectToSettings() {
-      this.router.navigate(['/eduquest/ajustes']);
+
+    redirectToSettings(from: string): void {
+      this.currentContext = from;
+      this.router.navigate(['/eduquest/ajustes'], { queryParams: { from: from } });
     }
 
+    togglePopup() {
+      this.showPopup = !this.showPopup;
+    }
   }

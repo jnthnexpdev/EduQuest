@@ -4,7 +4,7 @@
 <app-menu-dashboard></app-menu-dashboard>
 }
 
-<body class="flex-start-center-row">
+<body class="flex-start-center-row"  [ngClass]="darkTheme() ? 'dark-theme flex-center-center-row' : 'flex-center-center-row'">
 
     <aside>
 
@@ -56,8 +56,8 @@
         </table>
     </aside>
     <section class="flex-center-between-column">
-        <!-- <textarea  class="mb-24" id=""></textarea> -->
-        <img class="mb-24" src="/assets/img/editor.png" alt="">
+        <textarea  class="mb-24" id=""></textarea>
+        <!-- <img class="mb-24" src="/assets/img/editor.png" alt=""> -->
 
 
 
@@ -124,7 +124,7 @@
                     </ul>
                 </span>
             </div>
-            <div class=" content-post flex-center-between-column">
+            <div class="content-post flex-center-between-column">
                 <div class="content-text title-comment mt-8">
                     <span class="flex-center-between-row">
                         <h3 class="text-large">¿Cómo puedo centrar un div?</h3>
@@ -345,7 +345,7 @@
         </div>
         <div class="paginado-fake flex-center-center-row mt-24">
             <button class="btn-primary">Atras</button>
-            <P class="select-page flex-center-center-row">1</P>
+            <P class=" btn-primary select-page flex-center-center-row">1</P>
             <P> 2</P>
             <P>3</P>
             <P>4</P>

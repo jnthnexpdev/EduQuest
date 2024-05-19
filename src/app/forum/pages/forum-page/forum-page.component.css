@@ -1,14 +1,18 @@
-body {
-    background-color: var(--black);
- }
+.dark-theme textarea {background-color: var(--dark);}
+.dark-theme th {background-color: var( --indigo-light); color: var(--black);}
+.dark-theme td {background-color: var( --dark); color: var(--white);}
+.dark-theme table {background-color: var(--black);}
+.dark-theme .header-post{background-color: var( --indigo-light); color: var(--black);}
+.dark-theme .content-post{background-color: var(--dark);}
+.dark-theme .comment input, .dark-theme .content-comment p{background-color: var(--black);}
+.dark-theme .header-comment svg{fill: var(--indigo-light);}
+.dark-theme  svg{fill: var(--indigo-light);} 
 
-aside {
-    background-color: var(--black);
-    margin: 50px;
- }
-section{
-    margin:50px;
-}
+
+
+body {background-color: var(--black);}
+aside, section {margin: 50px;}
+
 
 table {
     width: 400px;
@@ -19,7 +23,7 @@ table {
 th{
     height: 40px;
     border-radius: 8px;
-    background: radial-gradient(circle,var(--indigo) 0%, var(--black) 100%);
+    background-color: var(--indigo);
     color: var(--white);
 }
 
@@ -31,6 +35,7 @@ td {
     padding: 10px;
     background-color: var(--white);
 }
+
 h3{font-weight: 600;}
 
 textarea {
@@ -49,13 +54,14 @@ textarea {
     height: 40px;
     border-radius: 8px 8px 0px 0px;
     background-color: var(--indigo);
-    background: radial-gradient(circle,var(--indigo) 0%, var(--black) 100%);
     color: var(--white);
 }
 
-.header-post  p, img, svg {
-    margin: 8px;
-}
+.header-post  p,  img { 
+    margin: 8px; 
+} 
+
+
 .content-post{
     width: 100%;
     min-height: 250px;
@@ -74,6 +80,7 @@ textarea {
 }
 .header-post  svg{
     fill: var(--white);
+    margin: 8px; 
 }
 
 .button-comment{ 
@@ -91,11 +98,6 @@ li{
 .comment{
     width: 100%;
     padding: 0px 12px 0px 12px;
-}
-
-.select-filter svg{
- fill: var(--indigo);
- background:none;
 }
 
 .title-comment{
@@ -161,8 +163,7 @@ select{
 
 .header-comment svg {
 fill: var(--indigo);
-stroke: var(--indigo);
-
+margin: 8px; 
 }
 
 
@@ -172,12 +173,6 @@ stroke: var(--indigo);
     cursor: pointer;
 }
 
-hr.style {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
 
 
 /* paginado fake */
@@ -185,7 +180,6 @@ hr.style {
     color: var(--white);
 }
 .select-page{
-    background-color: var(--indigo);
     width: 32px;
     height: 32px;
     border-radius: 50%;

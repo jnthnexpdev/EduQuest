@@ -1,13 +1,20 @@
 
+.darkmode .sun, .moon{fill: var(--white);}
+
+
+body{
+    background-color: var(--black);
+    min-height: 90dvh;
+}
+
+section{
+    margin: 0px 50px;
+}
 /* foto de perfil */
 .card-general-profile{
     text-align: center;
     width: 100%;
     height: 550px;
-    /* padding: 72px 250px; */
-    border-radius: 8px;
-    background: rgb(71,2,108);
-    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 30%);
 }                                                                                                               
 
 .card-general-profile img{
@@ -23,37 +30,75 @@
     color: var(--white);
 }
 
-label{
-    background-color: var(--indigo);
+.card-general-profile label{
     padding: 10px;
     border-radius: 8px;
-    color: var(--white);
+    cursor: pointer;
 }
 
 
 /* botones del input de imagnenes*/
 .btn-save {
-    background-color: var(--indigo);
     padding: 10px;
     border-radius: 8px;
-    color: var(--white);
     margin: 0 10px;
 }
 
 .btn-cancel {
-    background-color: var(--black);
-    border: solid 2px var(--indigo);
     padding: 9px;
     border-radius: 8px;
-    color: var(--white);
     margin: 0 10px;
 }
 
 .darkmode{
     margin-top: 30px;
-    width: 100px;}
+    padding: 7px;
+    border-radius: 50%;
+ 
+    /* border: solid 2px var(--white); */
+}
 
 .sun, .moon{
     width: 24px;
     height: 24px;
+    fill: var(--black);
 }
+
+
+form{
+    margin-bottom: 100px;
+}
+
+.grid-container-settings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+
+
+.card-container{
+    /* background-color: var(--white);
+    padding: 20px; */
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.toggle-Password{
+    position: absolute;
+    top: 20px;
+    right: 10px;
+}
+
+ input {
+    width: 350px;
+    height: 40px;
+}   
+
+.btn-delete{
+    background-color: var(--red);
+    border-radius: 8px;
+    color: var(--white);
+    font-weight: 600;
+}
+
+h2{color: var(--white);}

@@ -1,4 +1,10 @@
-body {
+.dark-theme .card-courses, .dark-theme .card-category {background-color: var(--dark); color: var(--white);    border: solid 2px var(--black);}
+.dark-theme .card-category button{background-color: var(--indigo-light);}
+.dark-theme .card-category:hover{border: solid 2px var(--indigo-light);}
+.dark-theme .nav-button svg{fill: var(--black);}
+.dark-theme .inp-search input {background-color: var(--dark);}
+.dark-theme .svg-header path {background-color: var(--indigo-light);}
+ body {
     background-color: var(--black);
 }
 
@@ -99,10 +105,9 @@ select{
 }
 .card-category:hover {
     cursor: pointer;
-    border: solid 2px var(--indigo-light);
+    border: solid 2px var(--indigo);
 }
 .nav-button {
-    background-color: var(--indigo);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -125,7 +130,6 @@ select{
     color: var(--white);
 }
 .select-page{
-    background-color: var(--indigo);
     width: 32px;
     height: 32px;
     border-radius: 50%;

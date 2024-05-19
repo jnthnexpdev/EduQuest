@@ -7,7 +7,7 @@ import { ShareRoutingModule} from './shared-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    ShareRoutingModule
+    ShareRoutingModule,
   ]
 })
 export class SharedModule { }

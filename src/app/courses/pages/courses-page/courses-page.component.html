@@ -1,11 +1,10 @@
-
-<body>
-<!-- header -->
 @if (!isAuth()) {
     <app-menu-home></app-menu-home>
   }@else{
     <app-menu-dashboard></app-menu-dashboard>
   }
+<body [ngClass]="darkTheme() ? 'dark-theme flex-center-center-column' : 'flex-center-center-column'">
+
 <!-- input de busqueda -->
 
 <section class="flex-center-center-column">
@@ -21,7 +20,7 @@
 
  <section>
     <div class="card-container flex-center-center-row mt-24 mb-24">
-        <button (click)="prevCard()" class="nav-button" [class.hidden]="currentIndex === 0">
+        <button (click)="prevCard()" class= "btn-primary nav-button" [class.hidden]="currentIndex === 0">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z"/>
             </svg>
@@ -34,7 +33,7 @@
                 </div>
             }
         </div>
-        <button (click)="nextCard()" class="nav-button" [class.hidden]="currentIndex >= cards.length - 6">
+        <button (click)="nextCard()" class="btn-primary nav-button" [class.hidden]="currentIndex >= cards.length - 6">
             <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                 <path d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"/>
             </svg>
@@ -236,8 +235,8 @@
 </section>
 <div class="paginado-fake flex-center-center-row mt-24">
     <button class="btn-primary">Atras</button>
-    <P class="select-page flex-center-center-row">1</P>
-    <P> 2</P>
+    <P class="btn-primary select-page flex-center-center-row">1</P>
+    <P>2</P>
     <P>3</P>
     <P>4</P>
     <P>5</P>

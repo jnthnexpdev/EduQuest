@@ -1,6 +1,6 @@
 <app-menu-dashboard></app-menu-dashboard>
 
-<body>
+<body [ngClass]="darkTheme() ? 'dark-theme flex-center-center-column' : 'flex-center-center-column'">
     <section>
 
         <!-- Sección de imagen -->
@@ -14,11 +14,10 @@
                 <p class="text-small mb-16">10/10/2029</p>
             </div>
 
-            <!-- Fin Sección de imagen -->
 
             <!-- Sección de Planes -->
 
-            <div class="flex-center-between-row">
+            <div class="flex-center-between-row mt-16">
                 <div class="current-card card-plans flex-center-center-column">
                     <div class="status-card btn-primary ">Actual</div>
                     <h2 class="text-large mt-16">Gratis</h2>
@@ -32,7 +31,7 @@
                             <a class="text-medium">Anuncios</a>
                         </li>
                         <li class="flex-center-start-row mb-8">
-                            <svg class="svg-header " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <svg class="svg-header" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                 <path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
                             </svg>
                             <a class="text-medium">Contenido profesional</a>
@@ -135,7 +134,7 @@
                 }
         </div>
     </section>
-<section>
+    <section>
     @if (showForumProfile) {
         <app-profile-forum></app-profile-forum>
     }
@@ -143,7 +142,7 @@
     @if (showCoursesProfile) {
         <app-profile-courses></app-profile-courses>
     }
-</section>
+    </section>
 
 </body>
 

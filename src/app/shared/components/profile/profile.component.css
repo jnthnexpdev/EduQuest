@@ -1,13 +1,16 @@
+.dark-theme .card-general-profile{ background: radial-gradient(circle, var(--indigo-light) 0%, var(--black) 28%);}
+.dark-theme .card-plans{background-color: var(--dark); color: var(--white);}
+.dark-theme .current-card {border:solid 5px var(--indigo-light);}
+.dark-theme svg{fill: var(--indigo-light);}
+.dark-theme .not-available{fill: var(--red);}
+
 
 body{
     background-color: var(--black);
-        /* background: rgb(71,2,108);
-    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 50%); */
 }
 
 section{
-  
-    margin: 0 auto;
+  width: 100%;
 }
 
 /* foto de perfil */
@@ -15,10 +18,7 @@ section{
     text-align: center;
     width: 100%;
     height: 550px;
-    /* padding: 72px 250px; */
-    border-radius: 8px;
-    background: rgb(71,2,108);
-    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 30%);
+    background: radial-gradient(circle, var(--indigo) 0%, var(--black) 28%);
 }                                                                                                               
 
 .card-general-profile img{
@@ -34,39 +34,13 @@ section{
     color: var(--white);
 }
 
-label{
-    background-color: var(--indigo);
-    padding: 10px;
-    border-radius: 8px;
-    color: var(--white);
-}
-
-
-/* botones del input de imagnenes*/
-.btn-save {
-    background-color: var(--indigo);
-    padding: 10px;
-    border-radius: 8px;
-    color: var(--white);
-    margin: 0 10px;
-}
-
-.btn-cancel {
-    background-color: var(--black);
-    border: solid 2px var(--indigo);
-    padding: 9px;
-    border-radius: 8px;
-    color: var(--white);
-    margin: 0 10px;
-}
-
 
 /* planes */
 
 .card-plans  {
     width: 300px;
     position: relative;
-    background-color: var(--gray);
+    background-color: var(--white);
     padding: 10px;
     margin: 10px;
     border-radius: 8px;
@@ -81,6 +55,10 @@ label{
 
   .not-available{
     fill: var(--red);
+  }
+
+  svg{
+    fill: var(--indigo);
   }
 
   .show-more{

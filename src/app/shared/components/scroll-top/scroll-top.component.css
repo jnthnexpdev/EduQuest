@@ -1,4 +1,5 @@
 .dark-theme .scroll-top-button { background: var(--indigo-light);}
+.dark-theme  svg{fill: var(--black);}
 
 .scroll-top-button {
     position: fixed;

@@ -18,6 +18,8 @@ export class SettingsComponent implements OnInit{
     profileImage: string = '/assets/img/profile/user2.jpeg';
     originalProfileImage: string = '/assets/img/profile/user2.jpeg';
     showSaveButton: boolean = false;
+    showButtons: boolean = false;
+    public hidePassword = signal(true);
 
     constructor(
         private systemService: SystemService,
@@ -57,6 +59,25 @@ export class SettingsComponent implements OnInit{
         this.darkTheme.set(this.systemService.getThemeState());
     }
 
-      
-
+    
+    togglePassword(): void {
+      if (this.hidePassword() === true) {
+        this.hidePassword.set(false);
+      } else {
+        this.hidePassword.set(true);
+      }
+    }
+  
+    requestContentCreator() {
+      console.log('Solicitud de creador de contenido enviada');
+    }
+  
+    deleteAccount() {
+      console.log('Cuenta eliminada');
+    }
+    
+    onInputChange() {
+      this.showButtons = true;
+    }
+    
 }

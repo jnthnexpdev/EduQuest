@@ -6,9 +6,10 @@
     --gray: #e2e2e2ff;
     --white : #fffffc;
     --black: #171618;
-    --dark: #333333ff;
+    --dark: #333333;
     --orange: #ffad1fda;
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -164,6 +165,8 @@
     margin-right: 8px;
 }
 
+.svg-path path {fill: var(--indigo);}
+
 /* Etiquetas formulario */
 .field-form{
     display: flex;
@@ -264,6 +267,8 @@ button:hover{
 .dark-theme .inp-form:focus{ border: 2px solid var(--indigo-light); }
 .dark-theme .inp-search:focus{ border: 2px solid var(--white); }
 .dark-theme .inp-search:focus svg{ fill: var(--white); }
+.dark-theme .select-filter select{background-color: var(--indigo-light); color: var(--black);}
+.dark-theme .svg-path path {fill: var(--indigo-light);}
 /* Responsivo */
 @media (min-width : 301px) and (max-width : 600px){
     .title-1{ font-size: 28.38px; }
