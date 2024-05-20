@@ -68,7 +68,7 @@ export class ForumPageComponent  implements OnInit{
 
   redirectToForum() {
     this.router.navigate(['/foro/inicio']);
-    
 }
+
 
 }

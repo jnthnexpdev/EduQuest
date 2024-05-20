@@ -1,17 +1,19 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
+import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
 
 @Component({
-  selector: 'app-courses-class-page',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './courses-class-page.component.html',
-  styleUrl: './courses-class-page.component.css'
+    selector: 'app-courses-class-page',
+    standalone: true,
+    templateUrl: './courses-class-page.component.html',
+    styleUrl: './courses-class-page.component.css',
+    imports: [NgClass, MenuDashboardComponent]
 })
 export class CoursesClassPageComponent implements OnInit  {
 
   darkTheme = signal(false);
+  ShowContent = signal(false);
 
   constructor(
     private systemService : SystemService
@@ -26,4 +28,8 @@ export class CoursesClassPageComponent implements OnInit  {
   getPreferences(){
     this.darkTheme.set(this.systemService.getThemeState());
   }
+  ShowContentComments(): void {
+    this.ShowContent.set(!this.ShowContent());
+  }
+
 }

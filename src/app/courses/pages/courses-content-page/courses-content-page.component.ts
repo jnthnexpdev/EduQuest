@@ -1,5 +1,6 @@
 import { Component, signal, OnInit } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
 import { NgClass } from '@angular/common';
 
@@ -15,7 +16,8 @@ export class CoursesContentPageComponent implements OnInit {
   darkTheme = signal(false);
 
   constructor(
-    private systemService : SystemService
+    private systemService : SystemService,
+    private router: Router,
   ){}
 
   ngOnInit() : void {
@@ -28,4 +30,7 @@ export class CoursesContentPageComponent implements OnInit {
     this.darkTheme.set(this.systemService.getThemeState());
   }
 
+  redirectToContentClass() {
+    this.router.navigate(['/cursos/contenido/clase']);
+  }
 }

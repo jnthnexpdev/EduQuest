@@ -7,6 +7,7 @@
 .dark-theme .comment input, .dark-theme .content-comment p{background-color: var(--black);}
 .dark-theme .header-comment svg{fill: var(--indigo-light);}
 .dark-theme  svg{fill: var(--indigo-light);} 
+.dark-theme .inp-search input {background-color: var(--black);}
 
 
 
@@ -118,7 +119,7 @@ li{
     height: 34px;
     border-radius: 8px;
     margin-bottom: 0px;
-    background-color: var(--black);
+    background-color: var(--white);
 }
 
 
