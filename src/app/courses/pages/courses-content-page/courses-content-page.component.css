@@ -1,4 +1,25 @@
-body{
+.dark-theme .time-line li {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.dark-theme li svg {
+    fill: var(--indigo-light);
+}
+
+.dark-theme button svg {
+    fill: var(--black);
+}
+
+.dark-theme .time-line::before {
+    background-color: var(--indigo-light);
+}
+
+.dark-theme .in-circle-current {
+    border: 10px solid var(--indigo-light);
+}
+
+body {
     background-color: var(--black);
     min-height: 90dvh;
 }
@@ -9,6 +30,7 @@ body{
     text-decoration: none;
     position: relative;
 }
+
 .time-line li {
     width: 600px;
     position: relative;
@@ -17,24 +39,26 @@ body{
     background-color: var(--white);
     color: var(--black);
     padding: 5px;
-    /* text-align: center; */
     border-radius: 8px;
 }
 
-.time-line li:hover{
+.time-line li:hover {
     cursor: pointer;
 }
 
-li svg{
+li svg {
     fill: var(--indigo);
 }
 
-button svg{
+button svg {
     fill: var(--white);
 }
 
+button p {
+    font-weight: 600;
+}
 
-.time-line::before{
+.time-line::before {
     content: '';
     position: absolute;
     top: 0;
@@ -43,36 +67,33 @@ button svg{
     background-color: var(--indigo);
 }
 
-
-
 .in-circle {
     width: 0;
     height: 0;
     position: absolute;
-   border-radius: 50%;
-   left: -28px;
-   top: 24px;
+    border-radius: 50%;
+    left: -28px;
+    top: 24px;
     border: 10px solid var(--white);
 }
 
-.in-circle-current{
+.in-circle-current {
     border: 10px solid var(--indigo);
 }
 
-h3{
+h3 {
     color: var(--white);
 }
 
-.video-container{
+.video-container {
     position: relative;
-    margin-top: 70px;
     padding-bottom: 56.25%;
     min-width: 800px;
     width: 100%;
     overflow: hidden;
 }
 
-.video-container img{
+.video-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,20 +102,16 @@ h3{
     object-fit: cover;
 }
 
-.footer-video{
+.footer-video {
     width: 100%;
     padding: 20px 0;
 
 }
 
-.description{
+.description {
     width: 100%;
     color: var(--white);
     max-width: 800px;
     text-align: justify;
     margin-top: 24px;
-}
-
-.malamala{
-    margin-top: -135px;
 }

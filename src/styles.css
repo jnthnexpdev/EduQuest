@@ -98,6 +98,13 @@
     flex-direction: row;
 }
 
+.flex-start-evenly-row{
+    display: flex;
+    align-items: start;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
 .flex-center-center-column{
     display: flex;
     align-items: center;
@@ -122,6 +129,7 @@
     justify-content: space-evenly;
     flex-direction: column;
 }
+
 .flex-center-between-column{
     display: flex;
     align-items: center;
@@ -142,6 +150,7 @@
     justify-content: center;
     flex-direction: column;
 }
+
 
 
 
