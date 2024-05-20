@@ -87,4 +87,8 @@ export class CoursesPageComponent implements OnInit {
       this.currentIndex--;
     }
   }
+
+  redirectToContent() {
+    this.router.navigate(['/cursos/contenido']);
+  }
 }
