@@ -8,6 +8,7 @@
 .dark-theme button.active {background-color: var(--indigo-light); color: var(--black);}
 .dark-theme button {background-color: var(--black); color: var(--white);}
 .dark-theme .line {background-color: var(--white);}
+.dark-theme .btn-save{background-color: var(--indigo-light) !important; color: var(--black) !important;}
 
 body {
     background-color: var(--black);
@@ -126,3 +127,9 @@ body {
     padding: 10px;
     background-color: var(--gray);
   }
+
+.btn-save {
+  padding: 10px;
+  font-weight: 600;
+  background-color: var(--indigo) !important; 
+}

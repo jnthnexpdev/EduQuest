@@ -80,12 +80,16 @@ button p {
 .in-circle-current {
     border: 10px solid var(--indigo);
 }
+.time-line-container {
+    margin-top: 40px;
+}
 
 h3 {
     color: var(--white);
 }
 
 .video-container {
+    margin-top: 40px;
     position: relative;
     padding-bottom: 56.25%;
     min-width: 800px;
