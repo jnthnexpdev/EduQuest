@@ -8,14 +8,19 @@ import { MenuHomeComponent } from "../../../shared/components/menu-home/menu-hom
 import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
 import { Subscription, window } from 'rxjs';
 import { AuthServiceService } from '../../../auth/services/auth/auth-service.service';
-
+import { EditorComponent } from "../../../shared/components/editor/editor.component";
 
 @Component({
     selector: 'app-forum-page',
     standalone: true,
     templateUrl: './forum-page.component.html',
     styleUrl: './forum-page.component.css',
-    imports: [NgClass, MenuHomeComponent, MenuDashboardComponent ]
+    imports: [
+        NgClass,
+        MenuHomeComponent,
+        MenuDashboardComponent,
+        EditorComponent
+    ]
 })
 export class ForumPageComponent  implements OnInit{
   
@@ -25,7 +30,6 @@ export class ForumPageComponent  implements OnInit{
   ShowContent2 = signal(false);
   public userLoggedSubscription: Subscription | undefined;
   public logedUser =false;
-  
 
   constructor(
     private systemService: SystemService,

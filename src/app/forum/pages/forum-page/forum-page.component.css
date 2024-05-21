@@ -13,7 +13,7 @@
 
 body {background-color: var(--black);}
 aside, section {margin: 50px;}
-
+article{ width: 800px; }
 
 table {
     width: 400px;

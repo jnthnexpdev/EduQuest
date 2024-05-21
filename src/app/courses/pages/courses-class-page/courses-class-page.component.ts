@@ -2,13 +2,14 @@ import { Component, signal, OnInit } from '@angular/core';
 import { SystemService } from '../../../shared/services/system/system.service';
 import { NgClass } from '@angular/common';
 import { MenuDashboardComponent } from "../../../shared/components/menu-dashboard/menu-dashboard.component";
+import { EditorComponent } from "../../../shared/components/editor/editor.component";
 
 @Component({
     selector: 'app-courses-class-page',
     standalone: true,
     templateUrl: './courses-class-page.component.html',
     styleUrl: './courses-class-page.component.css',
-    imports: [NgClass, MenuDashboardComponent]
+    imports: [NgClass, MenuDashboardComponent, EditorComponent]
 })
 export class CoursesClassPageComponent implements OnInit  {
 
