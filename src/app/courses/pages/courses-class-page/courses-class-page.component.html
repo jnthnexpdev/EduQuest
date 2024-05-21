@@ -6,19 +6,19 @@
             <img src="/assets/img/courses/cursos9.jpg" alt="cursos">
         </div>
         <div class="flex-center-start-row footer-video">
-            <h3>Lección 1: Las bases necesarias para programación estructurada</h3>
+            <h3 class=subtitle-2>Creación de sitios web</h3>
         </div>
     </section>
 
     <section>
         <div class="content-container flex-start-start-column mt-24">
-
             <div>
-                <button class="btn-primary" (click)="ShowContentComments()">Comentarios</button>
-                <button class="btn-primary" (click)="ShowContentComments()">Apuntes</button>
+                <button  class="btn-primary" [ngClass]="{ 'active': activeTab === 'comments' }"(click)="ShowContentComments()">Comentarios</button>
+                <button class="btn-primary"[ngClass]="{ 'active': activeTab === 'notes' }"(click)="ShowContentNotes()">Apuntes</button>
             </div>
 
-            @if (!ShowContent()) {
+            <div class="line mb-24"></div>
+            @if (activeTab === 'comments') {
             <div class="comments">
                 <div class="comment flex-center-start-row mt-8">
                     <input class="text-medium" type="text" placeholder=" Comentar">
@@ -49,9 +49,7 @@
                 </div>
                 <div class="content-comment flex-center-end-row mb-24">
                     <p class="text-medium ">
-                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas
-                        permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados
-                        unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen
+                        El curso cubre todo lo necesario para comenzar a desarrollar sitios web. Los instructores son muy pacientes y siempre están dispuestos a ayudar. Definitivamente valió la pena.
                     </p>
                 </div>
 
@@ -77,18 +75,16 @@
                 </div>
                 <div class="content-comment flex-center-end-row mb-24">
                     <p class="text-medium ">
-                        Simplemente como conjetura, imagine el lector una inversion de las circunstancias: que Hamas
-                        permitiese a los israelies vivir en cantones desparramados e invariables, virtualmente separados
-                        unos de otros, y en alguna pequeña parte de Jerusalen, mientras los palestinos construyen
+                        Aprender HTML, CSS y JavaScript nunca fue tan fácil. El curso me permitió adquirir las habilidades necesarias para empezar mi carrera en desarrollo web. Los proyectos prácticos son muy útiles.
                     </p>
                 </div>
             </div>
             }
 
-            @if (ShowContent()) {
+            @if (activeTab === 'notes') {
             <div class="flex-center-start-column">
                 <textarea></textarea>
-                <button></button>
+                <button class="btn-primary mt-16">Guardar</button>
             </div>
             }
         </div>

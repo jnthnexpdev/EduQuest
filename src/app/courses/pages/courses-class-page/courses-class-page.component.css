@@ -1,28 +1,13 @@
-.dark-theme .header-comment svg {
-    fill: var(--indigo-light);
-}
-
-.dark-theme .content-comment p {
-    background-color: var(--black);
-}
-
+.dark-theme .header-comment svg {fill: var(--indigo-light);}
+.dark-theme .content-comment p {background-color: var(--black);}
 .dark-theme .comment input,
-.dark-theme .content-comment p{
-    background-color: var(--black);
-}
-
-.dark-theme textarea{
-    background-color: var(--black);
-    color: var(--white);
-}
-
-.dark-theme .content-container {
-    background-color: var(--dark);
-}
-.dark-theme svg{
-    fill: var(--indigo-light);
-}
-
+.dark-theme .content-comment p{background-color: var(--black);}
+.dark-theme textarea{background-color: var(--black);color: var(--white);}
+.dark-theme .content-container {background-color: var(--dark);}
+.dark-theme svg{fill: var(--indigo-light);}
+.dark-theme button.active {background-color: var(--indigo-light); color: var(--black);}
+.dark-theme button {background-color: var(--black); color: var(--white);}
+.dark-theme .line {background-color: var(--white);}
 
 body {
     background-color: var(--black);
@@ -32,9 +17,10 @@ body {
 /* COntenido de video */
 
 .video-container {
+    margin-top: 40px;
     position: relative;
     padding-bottom: 56.25%;
-    min-width: 1000px;
+    min-width: 1100px;
     width: 100%;
     overflow: hidden;
 }
@@ -57,73 +43,86 @@ body {
 
 
 /* cotenido de comentarios y apuntes */
-
 .content-container {
+  margin-top: 60px;
     width: 500px;
     background-color: var(--white);
     padding: 20px;
     border-radius: 8px;
-    min-height: 570px;
-}
-button{
+    min-height: 625px;
+  }
+  
+  button {
     margin-right: 10px;
     width: 130px;
     border-radius: 8px;
     margin-bottom: 24px;
-} 
+    background-color: var(--gray);
+    color: var(--black);
+  }
+  
+  button.active {
+    background-color: var(--indigo);
+    color: var(--white);
+  }
 
-.comment input {
+  .line{
+    background-color: var(--black);
+    width: 460px;
+    height: 2px;
+  }
+  
+  .comment input {
     width: 100%;
     height: 35px;
     border-radius: 8px;
     background-color: var(--gray);
     padding: 10px;
-}
-
-.header-comment {
+  }
+  
+  .header-comment {
     padding-left: 4px;
     width: 100%;
-}
-
-.header-comment svg {
+  }
+  
+  .header-comment svg {
     fill: var(--indigo);
     margin: 8px;
-}
-
-li {
+  }
+  
+  li {
     list-style: none;
-}
-
-svg{
+  }
+  
+  svg {
     margin-left: 4px;
     fill: var(--indigo);
     cursor: pointer;
-    
-}
-
-.header-comment img {
+  }
+  
+  .header-comment img {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     margin-right: 8px;
-}
-
-.content-comment p {
+  }
+  
+  .content-comment p {
+    min-height: 110px;
     background-color: var(--gray);
     border-radius: 8px;
     padding: 10px;
-
-}
-
-.content-text-editor{
+  }
+  
+  .content-text-editor {
     background-color: var(--gray);
-    width: 100%;    
+    width: 100%;
     height: 100%;
-}
-
-textarea{
+  }
+  
+  textarea {
     width: 460px;
-    height: 450px;
+    height: 430px;
     padding: 10px;
     background-color: var(--gray);
-}
+  }

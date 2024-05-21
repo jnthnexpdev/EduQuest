@@ -15,6 +15,9 @@ export class CoursesClassPageComponent implements OnInit  {
   darkTheme = signal(false);
   ShowContent = signal(false);
 
+  activeTab: 'comments' | 'notes' = 'comments';
+
+
   constructor(
     private systemService : SystemService
   ){}
@@ -28,8 +31,12 @@ export class CoursesClassPageComponent implements OnInit  {
   getPreferences(){
     this.darkTheme.set(this.systemService.getThemeState());
   }
-  ShowContentComments(): void {
-    this.ShowContent.set(!this.ShowContent());
+
+  ShowContentComments() {
+    this.activeTab = 'comments';
   }
 
+  ShowContentNotes() {
+    this.activeTab = 'notes';
+  }
 }
