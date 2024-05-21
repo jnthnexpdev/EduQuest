@@ -131,5 +131,6 @@ body {
 .btn-save {
   padding: 10px;
   font-weight: 600;
+  color: var(--white);
   background-color: var(--indigo) !important; 
 }
